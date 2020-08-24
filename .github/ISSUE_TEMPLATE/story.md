@@ -1,6 +1,6 @@
 ---
-name: Story
-about: Create a user story
+name: User Story
+about: Create a functional user story
 title: ''
 labels: 'needs-triage'
 assignees: ''
