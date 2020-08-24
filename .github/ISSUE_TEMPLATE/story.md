@@ -1,0 +1,50 @@
+---
+name: Story
+about: Create a user story
+title: ''
+labels: 'needs-triage'
+assignees: ''
+
+---
+
+
+#### Header:
+
+- Desired fix version:
+
+
+## Functional requirement
+
+**As a**
+
+**I want to**
+
+**In order to**
+
+## Acceptance criteria
+
+**Given**
+
+**When**
+
+**Then**
+
+## Designer notes
+
+## Developer notes
+
+## QA notes
+
+## Documentation notes
+
+## Non-functional requirements
+- Security
+  - Identity management
+  - Authentication
+  - Authorization
+  - Session management
+  - Data validation
+  - Error handling
+- Performances
+- Migration
+- Documentation
