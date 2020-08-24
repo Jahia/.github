@@ -6,7 +6,7 @@ labels: 'needs-triage'
 assignees: ''
 
 ---
-## About the future fix
+## The Fix
 - Affected version: <!-- Which versions are currently affected by the issue -->
 - Desired Fix version: <!-- Which versions would you like this fix deployed to -->
 
