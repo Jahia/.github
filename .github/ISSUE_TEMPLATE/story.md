@@ -6,11 +6,7 @@ labels: 'needs-triage'
 assignees: ''
 
 ---
-
-
-#### Header:
-
-- Desired fix version:
+> Fix version:
 
 
 ## Functional requirement
@@ -21,6 +17,7 @@ assignees: ''
 
 **In order to**
 
+
 ## Acceptance criteria
 
 **Given**
@@ -28,6 +25,7 @@ assignees: ''
 **When**
 
 **Then**
+
 
 ## Designer notes
 
