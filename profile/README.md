@@ -1,6 +1,6 @@
 # Welcome to Jahia's Github repositories
 
-![github-banner](https://github.com/Jahia/.github/assets/736584/0a4e3edc-1771-49ab-9812-a38d506be519)
+![github-banner](https://github.com/Jahia/.github/assets/736584/ab9da126-5f43-412d-b504-7385963a490b)
 
 ## Our digital platform consists of :
 
