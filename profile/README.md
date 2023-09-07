@@ -1,8 +1,6 @@
 # Welcome to Jahia's Github repositories
 
-
-https://github.com/Jahia/.github/assets/736584/573b9a8c-046d-4aed-a633-b2e90f015ad1
-
+https://github.com/Jahia/.github/assets/736584/573b9a8c-046d-4aed-a633-b2e90f015ad1                            
 
 <!--
 
@@ -56,7 +54,6 @@ Most of our documentation, including developer documentation may be found on the
 ## Connect with us
 
 <a href="https://www.linkedin.com/company/jahia-solutions/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Jahia Solutions | LinkedIn" width="21px"/></a>
-
 
 ## We love feedback
 
