@@ -53,8 +53,7 @@ Most of our documentation, including developer documentation may be found on the
 
 ## Connect with us
 
-<a href="https://www.linkedin.com/company/jahia-solutions/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Jahia Solutions | LinkedIn" width="21px"/></a>
-
-## We love feedback
-
 Don't hesitate to reach us by using our [Contact Page](https://www.jahia.com/contact) or if you are an existing customer, you can use our [Support Issue tracker](https://support.jahia.com)
+
+Also you can find us on  
+[LinkedIn](https://www.linkedin.com/company/jahia-solutions/) <a href="https://www.linkedin.com/company/jahia-solutions/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Jahia Solutions | LinkedIn" width="21px"/></a>
