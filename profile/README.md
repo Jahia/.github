@@ -2,11 +2,10 @@
 
 ![github-banner](https://github.com/Jahia/.github/assets/736584/ab9da126-5f43-412d-b504-7385963a490b)
 
-## Our digital platform consists of :
+## Our Digital Experience Platform consists of :
 
 - A User-friendly CMS with efficient content creation and handling
 - A powerful CDP for better segmentation and conversion optimization
-- A headless or traditional approach in a modular architecture
 
 ## What you will find here
 
@@ -26,7 +25,7 @@ Our platform is mostly composed of open-source software, and in our organization
 - https://github.com/apache/unomi : The open source code of our CDP platform, that was contributed to the Apache Software Foundation
 - https://github.com/Jahia/open-source : A more detailed explanation of how Jahia contributes to open source and how you may use it and contribute as well
 - https://github.com/Jahia/jcontent : The UI for our editing backend
-- https://github.com/Jahia/moonstone : Our UI Design Kit, implemented in React and used through all of Jahia's UIs. It is designed to be reusable in your own Jahia modules
+- https://github.com/Jahia/moonstone : Our UI Design Kit, implemented in React and used through all of Jahia's UIs.
 - https://github.com/Jahia/app-shell : The core launcher for our UI applications, as well as the framework for sharing front-end libraries
 - https://github.com/Jahia/jahia-cypress : Our [Cypress](https://www.cypress.io/) QA library to make writing automated QA tests easier
 
@@ -39,6 +38,10 @@ Most of our documentation, including developer documentation, may be found on th
 - [Developer documentation](https://academy.jahia.com/documentation/developer) : All the developer documentation
 - [Developer Webinars](https://academy.jahia.com/customer-center/webinars-for-developers) : A collection of past webinars to get the latest and greatest about developing with Jahia
 - [Online developer training](https://academy.jahia.com/training-kb/online-developer-training#tab-66634213-8154-4a3d-8d43-d728f57ac094) : This free training introduces developer basics and shows how to develop templates. The training usually takes 2 days to complete.
+
+## Customers supplemental code access
+
+Existing Jahia customers may request access to source code that is not publicly available (for example jExperience or Augmented Search). Please contact us (see below) if you want need to access such resources.
 
 ## Connect with us
 
