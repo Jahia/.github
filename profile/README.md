@@ -47,13 +47,7 @@ Most of our documentation, including developer documentation, may be found on th
 - [Developer Webinars](https://academy.jahia.com/customer-center/webinars-for-developers) : A collection of past webinars to get the latest and greatest about developing with Jahia
 - [Online developer training](https://academy.jahia.com/training-kb/online-developer-training#tab-66634213-8154-4a3d-8d43-d728f57ac094) : This free training introduces developer basics and shows how to develop templates. The training usually takes 2 days to complete.
 
-</details>
-
 ## Connect with us
-
-Don't hesitate to connect with us.
-
-<details>
 
 Don't hesitate to reach us by using our [Contact Page](https://www.jahia.com/contact) or if you are an existing customer, you can use our [Support Issue tracker](https://support.jahia.com)
 
