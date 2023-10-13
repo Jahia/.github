@@ -2,11 +2,6 @@
 
 ![GitHub](https://github.com/Jahia/.github/assets/736584/19561652-c577-4587-ab01-cb673e49b570)
 
-## Our Digital Experience Platform consists of :
-
-- A User-friendly CMS with efficient content creation and handling
-- A powerful CDP for better segmentation and conversion optimization
-
 ## Samples
 
 We provide a lot of samples to get you started quickly.
@@ -23,7 +18,7 @@ We provide a lot of samples to get you started quickly.
 
 ## Main projects
 
-Our platform is mostly composed of open-source software, and in our organization's repositories you will find all our publicly available the source code
+Our platform is mostly composed of open-source software, and in our repositories you will find our publicly available source code
 
 <details>
   
@@ -42,7 +37,7 @@ Existing Jahia customers may request access to source code that is not publicly 
 
 ## Jahia Academy: our documentation site
 
-Most of our documentation, including developer documentation, may be found on the [Jahia Academy](https://academy.jahia.com). We highlight some of the available sections here.
+Most of our documentation, including developer documentation, may be found on the [Jahia Academy](https://academy.jahia.com).
 
 <details>
 
