@@ -11,13 +11,21 @@
 
 ### Samples 
 
+<details>
+  <summary>View</summary>
+  
 - https://github.com/Jahia/OSGi-modules-samples : A great collection of examples of Jahia modules
 - https://github.com/Jahia/augmented-search-custom-configuration : This module can be used to provide custom mappings and settings for Augmented Search
 - https://github.com/Jahia/sample-bootstrap-templates : Example of templates using Bootstrap
-- https://github.com/Jahia/provisioning-tutorials : Provisiong API tutorials
+- https://github.com/Jahia/provisioning-tutorials : Provisioning API tutorials
+
+</details>
+
 
 ### Main projects
 
+<details>
+  <summary>View</summary>
 Our platform is mostly composed of open-source software, and in our organization's repositories you will find all the source code for important parts of our products including : 
 
 - https://github.com/Jahia/jahia : The core of our CMS' source code
@@ -28,6 +36,7 @@ Our platform is mostly composed of open-source software, and in our organization
 - https://github.com/Jahia/moonstone : Our UI Design Kit, implemented in React and used through all of Jahia's UIs.
 - https://github.com/Jahia/app-shell : The core launcher for our UI applications, as well as the framework for sharing front-end libraries
 - https://github.com/Jahia/jahia-cypress : Our [Cypress](https://www.cypress.io/) QA library to make writing automated QA tests easier
+</details>
 
 ## Don't forget the Jahia Academy
 
@@ -45,7 +54,11 @@ Existing Jahia customers may request access to source code that is not publicly 
 
 ## Connect with us
 
+<details>
+  <summary>View</summary>
 Don't hesitate to reach us by using our [Contact Page](https://www.jahia.com/contact) or if you are an existing customer, you can use our [Support Issue tracker](https://support.jahia.com)
 
 Also, you can find us on  
 [LinkedIn](https://www.linkedin.com/company/jahia-solutions/) <a href="https://www.linkedin.com/company/jahia-solutions/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Jahia Solutions | LinkedIn" width="21px"/></a>
+</details>
+
