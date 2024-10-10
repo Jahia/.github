@@ -2,9 +2,6 @@
     "name": "Jahia Module Release Workflow",
     "description": "Workflow used for releasing JS or MVN modules",
     "iconName": "octicon package",
-    "categories": [
-        "Go"
-    ],
     "filePatterns": [
         "package.json$",
         "pom.xml$"
