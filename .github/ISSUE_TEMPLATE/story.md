@@ -1,6 +1,6 @@
 ---
 name: User Story
-about: Create a functional user story
+about: Create a user story
 title: ''
 type: Story
 
