@@ -2,10 +2,11 @@
 name: User Story
 about: Create a functional user story
 title: ''
-labels: 'needs-triage'
+labels: needs-triage
 assignees: ''
 
 ---
+
 > Fix version:
 
 

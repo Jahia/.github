@@ -2,10 +2,11 @@
 name: Bug
 about: Report a bug in Jahia or one of its modules
 title: ''
-labels: 'needs-triage'
+labels: needs-triage
 assignees: ''
 
 ---
+
 ## The Fix
 - Affected version: <!-- Which versions are currently affected by the issue -->
 - Desired fix version: <!-- Which versions would you like this fix deployed to -->
