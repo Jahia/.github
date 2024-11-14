@@ -2,48 +2,26 @@
 name: User Story
 about: Create a functional user story
 title: ''
-labels: needs-triage
-assignees: ''
+type: Story
 
 ---
 
-> Fix version:
+**As a** 
+
+**I want to** 
+
+**In order to** 
 
 
-## Functional requirement
+### Acceptance criterias
 
-**As a**
+**Given** 
 
-**I want to**
+**When** 
 
-**In order to**
-
-
-## Acceptance criteria
-
-**Given**
-
-**When**
-
-**Then**
+**Then** 
 
 
-## Designer notes
+### Notes
 
-## Developer notes
-
-## QA notes
-
-## Documentation notes
-
-## Non-functional requirements
-- Security
-  - Identity management
-  - Authentication
-  - Authorization
-  - Session management
-  - Data validation
-  - Error handling
-- Performances
-- Migration
-- Documentation
+Useful information (Technical, Design)
