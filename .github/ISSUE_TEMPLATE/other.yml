@@ -5,3 +5,10 @@ name: Other
 description: Create a GitHub issue
 title: "<title>"
 labels: ["need-triage"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the issue
+    validations:
+      required: true
