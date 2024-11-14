@@ -2,8 +2,8 @@
 name: Bug
 about: Report a bug in Jahia or one of its modules
 title: ''
-labels: ['bug', 'needs-triage']
-assignees: ''
+labels: ['needs-triage']
+type: Bug
 
 ---
 
