@@ -11,28 +11,6 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  # We'll need to use: https://github.com/marketplace/actions/advanced-issue-labeler
-  # To add Product Area as a label 
-  - type: dropdown
-    id: area
-    attributes:
-      label: Product area
-      description: What area of the product is impacted
-      options:
-        - CMS Content Editing
-        - CMS Developer Experience
-        - CMS Platform & Administration
-        - CMS Authentication
-        - CMS SEO
-        - Content Connectors
-        - Cloud
-        - Augmented Search
-        - jExperience & Stackconnect
-        - Forms
-        - Demo
-      default: 0
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: Environment and versions used
