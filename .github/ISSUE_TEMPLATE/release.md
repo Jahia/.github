@@ -1,12 +1,10 @@
 ---
-name: User Story
-about: Create a user story
+name: Release
+about: Create a release
 title: ''
-type: Story
+type: Task
 
 ---
-
-If you are releasing for the main branch of a module, make sure to {*}{color:#de350b}complete the checklist below when working on the ticket{color}{*}.
 
 ## Minimum Jahia Version
 
@@ -26,6 +24,8 @@ In the testing matrix, always use the latest patch version of a particular relea
 |---|---|---|---|---|
 |YES / NO|8.1.1.2|1.0.0|3.0.0| |
 |YES / NO|8.1.7.1|2.0.0|3.0.0| |
+
+:information_source: If you are releasing for the main branch of a module, make sure to complete the checklist below when working on the ticket.
 
 ## Prepare Checklist
 
