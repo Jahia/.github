@@ -5,21 +5,13 @@ When lists are present, the item can be:
  - Checked: The item has been done
 -->
 
-## JIRA
-
-<!-- 
-Please link the JIRA issue related to this PR.
-You can replace "PROJECT" by your project name in this template, so only the issue number needs to be replaced by the PR author.
--->
-
-https://jira.jahia.org/browse/PROJECT-XXX
-
 ## Description
 
 <!-- 
 Please describe what your change is about. 
 If you made specific implementation choices worth an explanation, those can be detailed in this section 
 -->
+...
 
 ## Tests
 
