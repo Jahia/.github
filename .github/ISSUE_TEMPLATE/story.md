@@ -13,7 +13,9 @@ type: Story
 **In order to** 
 
 
-### Acceptance criterias
+## Testable scenarios
+
+### Main Case
 
 **Given** 
 
@@ -22,6 +24,14 @@ type: Story
 **Then** 
 
 
-### Notes
+### Case Nx
+
+**Given** 
+
+**When** 
+
+**Then** 
+
+## Notes
 
 Useful information (Technical, Design)
