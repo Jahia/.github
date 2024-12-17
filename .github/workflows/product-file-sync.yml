@@ -1,0 +1,18 @@
+# Synchronize common workflows and configuration across all product repositories
+name: Product - Sync. Files
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  file_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wadackel/files-sync-action@v3
+        with:
+          github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}        
