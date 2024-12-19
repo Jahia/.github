@@ -1,0 +1,10 @@
+name: Delivery - Issue Chores
+
+on:
+  issues:
+  issue_comment:
+
+jobs:
+  WF:
+    uses: Jahia/jahia-modules-action/.github/workflows/issue-chores.yml@v2
+    secrets: inherit
