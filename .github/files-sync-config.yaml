@@ -1,0 +1,14 @@
+# Configuration file used by the product-file-sync.yml workflow
+settings:
+  pull_request:
+    disabled: true
+  commit: 
+    format: '<%- prefix %>: <%- subject %>'
+    prefix: 'chore'
+    subject: 'sync files with `<%- repository %> [skip ci]`  
+patterns:
+  - files:
+      - .github/release.yml
+      - .github/workflows/delivery-issue-chores.yml
+    repositories:
+      - Jahia/sandbox@main
