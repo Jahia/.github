@@ -1,0 +1,22 @@
+# This file should be sync'd across all product repositories
+# Default types => labels are defined here: https://github.com/commitizen/conventional-commit-types/blob/master/index.json
+# feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+  categories:
+    - title: Breaking Changes
+      labels:
+        - breaking-change
+    - title: New Features
+      labels:
+        - feat
+        - feature
+    - title: Bug fixes
+      labels:
+        - bugfix
+        - fix
+    - title: Other Changes
+      labels:
+        - "*"
