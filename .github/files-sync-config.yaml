@@ -5,7 +5,7 @@ settings:
   commit: 
     format: '<%- prefix %>: <%- subject %>'
     prefix: 'chore'
-    subject: 'sync files with `<%- repository %> [skip ci]`  
+    subject: 'sync files with `<%- repository %> [skip ci]'
 patterns:
   - files:
       - .github/release.yml
