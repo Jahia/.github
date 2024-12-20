@@ -1,7 +1,9 @@
 # Configuration file used by the product-file-sync.yml workflow
 settings:
   pull_request:
-    title: <%- prefix %>: <%- subject %>
+    title: 'chore: sync files with `<%- repository %>'
+    labels:
+      - chores
     merge: 
       mode: admin
       strategy: squash
