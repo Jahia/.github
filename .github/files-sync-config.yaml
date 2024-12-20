@@ -1,9 +1,9 @@
 # Configuration file used by the product-file-sync.yml workflow
 settings:
   pull_request:
-    title: 'chore: sync files with `<%- repository %>'
+    title: 'chore: sync files with `<%- repository %>` [skip ci]'
     labels:
-      - chores
+      - chore
     merge: 
       mode: admin
       strategy: squash
