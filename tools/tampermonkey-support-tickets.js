@@ -14,7 +14,7 @@
 
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/'; // Update with your Jira instance URL.
     const cfgProjectName = 'Customers'
-    const cfgTicketsFieldName = 'Support tickets'
+    const cfgTicketsFieldName = 'Jira tickets'
 
     function findProject(projectName) {
         const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
