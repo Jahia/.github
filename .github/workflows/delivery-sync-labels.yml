@@ -13,7 +13,7 @@ jobs:
         uses: fgerthoffert/actions-sync-labels@v1.0.0
         with:
           org: jahia
-          token: ${{ secrets.GH_JAHIACI_TOKEN }}
+          token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
           src_repository: .github
           filter_topics: product,community
           filter_operator: OR
