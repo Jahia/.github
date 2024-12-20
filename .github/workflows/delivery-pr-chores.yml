@@ -1,0 +1,10 @@
+name: Delivery - PR Chores
+
+on:
+  pull_request:
+  pull_request_review:
+
+jobs:
+  WF:
+    uses: Jahia/jahia-modules-action/.github/workflows/pr-chores.yml@v2
+    secrets: inherit
