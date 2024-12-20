@@ -16,5 +16,6 @@ patterns:
   - files:
       - .github/release.yml
       - .github/workflows/delivery-issue-chores.yml
+      - .github/workflows/delivery-pr-chores.yml
     repositories:
       - Jahia/sandbox@main
