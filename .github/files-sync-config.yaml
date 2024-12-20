@@ -1,7 +1,10 @@
 # Configuration file used by the product-file-sync.yml workflow
 settings:
   pull_request:
-    disabled: true
+    merge: 
+      mode: admin
+      strategy: squash
+      delete_branch: true
   commit: 
     format: '<%- prefix %>: <%- subject %>'
     prefix: 'chore'
