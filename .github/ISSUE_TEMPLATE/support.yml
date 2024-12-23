@@ -3,7 +3,7 @@
 
 name: Support Request
 description: File a support request.
-title: "<title>"
+title: 
 labels: ["support-request"]
 type: Sup
 body:
