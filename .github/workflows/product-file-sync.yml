@@ -14,5 +14,5 @@ jobs:
       - uses: wadackel/files-sync-action@v3
         with:
           github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
-          config_file: .github/product-files-sync-config.yml
+          config_file: .github/product-file-sync-config.yml
 
