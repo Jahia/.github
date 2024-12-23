@@ -4,7 +4,7 @@
 name: Support Request
 description: File a support request.
 title: 
-labels: ["support-request"]
+labels: 
 type: Sup
 body:
   - type: markdown
