@@ -19,4 +19,4 @@ patterns:
       - .github/workflows/delivery-pr-chores.yml
       - .github/workflows/delivery-repo-chores.yml
     repositories:
-      - Jahia/sandbox@main
+      - jahia/sandbox@main
