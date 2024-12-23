@@ -15,7 +15,7 @@ settings:
 patterns:
   - files:
       - .github/release.yml
-      # - .github/workflows/delivery-issue-chores.yml
+      - .github/workflows/delivery-issue-chores.yml
       # - .github/workflows/delivery-pr-chores.yml
       # - .github/workflows/delivery-repo-chores.yml
     repositories:
