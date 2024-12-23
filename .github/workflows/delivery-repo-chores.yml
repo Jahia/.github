@@ -1,0 +1,11 @@
+name: Delivery - PR Chores
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 0" # 2 AM every Sunday
+
+jobs:
+  WF:
+    uses: Jahia/jahia-modules-action/.github/workflows/delivery-repo-chores.yml@v2
+    secrets: inherit
