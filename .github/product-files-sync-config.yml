@@ -13,12 +13,13 @@ settings:
     prefix: 'chore'
     subject: 'sync files with `<%- repository %>` [skip ci]'
 patterns:
+  # Important, committing to the .github/workflows folder 
+  # require the user to have "workflow" scope on the token
+  # https://github.com/octokit/rest.js/issues/368
   - files:
       - .github/release.yml
-      # - .github/workflows/delivery-issue-chores.yml
-      # - .github/workflows/delivery-pr-chores.yml
-      # - .github/workflows/delivery-repo-chores.yml
-      - from: .github/workflows/delivery-repo-chores.yml
-        to: .github/workflows/abcd.yml
+      - .github/workflows/delivery-issue-chores.yml
+      - .github/workflows/delivery-pr-chores.yml
+      - .github/workflows/delivery-repo-chores.yml
     repositories:
       - jahia/sandbox@main
