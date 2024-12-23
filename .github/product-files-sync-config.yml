@@ -19,6 +19,6 @@ patterns:
       # - .github/workflows/delivery-pr-chores.yml
       # - .github/workflows/delivery-repo-chores.yml
       - from: .github/workflows/delivery-repo-chores.yml
-        to: .github/workflows/delivery-repo-chores.yml
+        to: .github/delivery-repo-chores.yml
     repositories:
       - jahia/sandbox@main
