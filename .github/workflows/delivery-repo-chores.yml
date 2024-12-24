@@ -1,6 +1,6 @@
 # DO NOT EDIT
 # This file is managed globally at https://github.com/Jahia/.github
-name: Delivery - PR Chores
+name: Delivery - Repo Chores
 
 on:
   workflow_dispatch:
