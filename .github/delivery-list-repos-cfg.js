@@ -5,7 +5,7 @@ export default {
       {
         label: '',
         value: row => {
-          return row.nameWithOwner + '@' + row.defaultBranchRef.name
+          return ' - ' + row.nameWithOwner + '@' + row.defaultBranchRef.name
         }
       }
     ]
