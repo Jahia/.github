@@ -13,7 +13,7 @@ type: Story
 **In order to** 
 
 
-### Acceptance criterias
+### Acceptance criteria
 
 **Given** 
 
