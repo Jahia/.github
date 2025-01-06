@@ -15,6 +15,6 @@ jobs:
           org: jahia
           token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
           src_repository: .github
-          filter_topics: product,community
+          filter_topics: product,cloud,community
           filter_operator: OR
 
