@@ -3,6 +3,7 @@ name: Epic
 about: Create an epic
 title: ''
 type: Epic
+projects: ["Jahia/18"]
 
 ---
 
