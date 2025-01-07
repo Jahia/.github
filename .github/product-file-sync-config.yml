@@ -18,13 +18,10 @@ patterns:
   # https://github.com/octokit/rest.js/issues/368
   - files:
       - .github/release.yml
-      - from: .github/ISSUE_TEMPLATE/product/release.md
-        to: .github/ISSUE_TEMPLATE/release.md
-      - from: .github/ISSUE_TEMPLATE/product/support.yml
-        to: .github/ISSUE_TEMPLATE/support.yml
-      - from: .github/ISSUE_TEMPLATE/product/tech-day.md
-        to: .github/ISSUE_TEMPLATE/tech-day.md
-      - .github/workflows/delivery-issue-chores.yml
+      - from: .github/ISSUE_TEMPLATE
+        to: .github/ISSUE_TEMPLATE
+      - from: .github/ISSUE_TEMPLATE/product
+        to: .github/ISSUE_TEMPLATE        
       # Skipping the PR chores workflow until right before the migration to GitHub issues
       # - .github/workflows/delivery-pr-chores.yml
     repositories:
