@@ -1,3 +1,5 @@
+<!-- WARNING: This template file is coming from the .github repository -->
+<!-- Only edit the file there -->
 ---
 name: Epic
 about: Create an epic
