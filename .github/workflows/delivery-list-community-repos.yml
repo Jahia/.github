@@ -1,7 +1,7 @@
 # This workflow lists all repositories matching specific topics.
 # It is useful to obtain the list of repositories that needs to be updated by the file-sync workflow
 # and then copy/paste this list in the configuration
-name: Delivery - List repositories
+name: Delivery - List Community Repositories
 
 on:
   workflow_dispatch:
@@ -23,8 +23,7 @@ jobs:
         with:
           org: jahia
           token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
-          filter_topics: product,community
-          filter_operator: OR
+          filter_topics: community
           filter_ignore_archived: true
 
       - name: Convert the NDJSON to CSV
