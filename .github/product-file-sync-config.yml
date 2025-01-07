@@ -20,6 +20,8 @@ patterns:
       - .github/release.yml
       - from: .github/ISSUE_TEMPLATE
         to: .github/ISSUE_TEMPLATE
+        exclude:
+          - 'product'        
       - from: .github/ISSUE_TEMPLATE/product
         to: .github/ISSUE_TEMPLATE        
       # Skipping the PR chores workflow until right before the migration to GitHub issues
