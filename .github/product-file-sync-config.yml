@@ -28,11 +28,11 @@ patterns:
       # - .github/workflows/delivery-pr-chores.yml
     repositories:
       # An updated version of this list can be obtained by running this 
-      # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-repos.yml
+      # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml
       # IMPORTANT: The following repositories should not be synced
       # from the list based on topics, make sure to remove them:
       # - Jahia/.github => This is the current repository
-      # - Jahia/jahia => This is a clone of jahia-private
+      # - Jahia/jahia => This is a clone of jahia-private
 
       # To uncomment before migration
       # - Jahia/advanced-visibility@master

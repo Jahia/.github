@@ -1,0 +1,37 @@
+# This workflow lists all repositories matching specific topics.
+# It is useful to obtain the list of repositories that needs to be updated by the file-sync workflow
+# and then copy/paste this list in the configuration
+name: Delivery - List Cloud Repositories
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-repos-labels:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout is needed to grab the configuration file
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Get Cloud Repositories
+        id: get-repos
+        uses: fgerthoffert/actions-get-org-repos@v1.0.0
+        with:
+          org: jahia
+          token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
+          filter_topics: cloud
+          filter_ignore_archived: true
+
+      - name: Convert the NDJSON to CSV
+        shell: bash
+        run: |
+          npx @json2csv/cli -i ${{ steps.get-repos.outputs.artifact_filepath }} --ndjson --config ${{ github.workspace }}/.github/delivery-list-repos-cfg.js -o repositories.csv
+
+      - name: List repositories
+        shell: bash
+        run: |
+          cat repositories.csv | tr -d \"
