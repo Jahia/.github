@@ -1,8 +1,7 @@
 # Change management procedure documentation: https://jahia-confluence.atlassian.net/wiki/x/rwkH
 ---
-name: Cloud Change Request
-description: Change management procedure.
-title: ''
+name: Cloud - Change Request
+description: 'Open a Cloud "change request" following the ISO "change management procedure"'
 projects: ["Jahia/33"]
 body:
   - type: textarea
