@@ -21,7 +21,7 @@ patterns:
       - from: .github/ISSUE_TEMPLATE
         to: .github/ISSUE_TEMPLATE
         exclude:
-          - '*custom_*'        
+          - '**/custom_*/*'        
       - from: .github/ISSUE_TEMPLATE/custom_product
         to: .github/ISSUE_TEMPLATE        
       # Skipping the PR chores workflow until right before the migration to GitHub issues
