@@ -8,6 +8,7 @@ description: File a bug report.
 title: "[BUG] <title>"
 labels: ["need-triage"]
 type: Bug
+projects: ["Jahia/13"]
 body:
   - type: markdown
     attributes:
