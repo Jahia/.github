@@ -22,7 +22,7 @@ patterns:
         to: .github/ISSUE_TEMPLATE
         exclude:
           - 'custom_*'        
-      - from: .github/ISSUE_TEMPLATE/product
+      - from: .github/ISSUE_TEMPLATE/custom_product
         to: .github/ISSUE_TEMPLATE        
       # Skipping the PR chores workflow until right before the migration to GitHub issues
       # - .github/workflows/delivery-pr-chores.yml
