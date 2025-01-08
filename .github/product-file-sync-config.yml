@@ -34,7 +34,6 @@ patterns:
       # from the list based on topics, make sure to remove them:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
-      # - Jahia/jahia-modules-action@main => Until the re-usable workflow is configured with a different name than the main workflow
        - Jahia/advanced-visibility@master
        - Jahia/app-shell@master
        - Jahia/asset-webpack-example@main
@@ -109,6 +108,7 @@ patterns:
        - Jahia/jahia-developer-tools@master
        - Jahia/jahia-ee@master
        - Jahia/Jahia-MF-Integ-Test-Site@master
+       - Jahia/jahia-modules-action@main 
        - Jahia/jahia-oauth@master
        - Jahia/jahia-pack@master
        - Jahia/jahia-pack-private@master
