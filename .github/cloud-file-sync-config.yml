@@ -21,7 +21,7 @@ patterns:
       - from: .github/ISSUE_TEMPLATE
         to: .github/ISSUE_TEMPLATE
         exclude:
-          - '**/custom_*/*'        
+          - '**/custom_*/*'
       - from: .github/ISSUE_TEMPLATE/custom_cloud
         to: .github/ISSUE_TEMPLATE
     repositories:
@@ -32,5 +32,32 @@ patterns:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
 
-      # To be completed before migration
+      # To uncomment before migration
+#      - Jahia/cloud-core-ansible@main
+#      - Jahia/cloud-core-ara@main
+#      - Jahia/cloud-core-infrastructure@main
+#      - Jahia/cloud-core-monitoring@main
+#      - Jahia/cloud-core-routing@main
+#      - Jahia/cloud-core-terraform-registry@main
+#      - Jahia/cloud-core-vault@main
+#      - Jahia/cloud-ec-infra@main
+#      - Jahia/cloud-fallback-vpn@main
+#      - Jahia/cloud-guru@main
       - Jahia/cloud-issues@main
+#      - Jahia/cloud-nginx4github@main
+#      - Jahia/cloud-ops-dashboard@main
+#      - Jahia/cloud-ops-dashboard-k8s@main
+#      - Jahia/cloud-papi@main
+#      - Jahia/cloud-utils@main
+#      - Jahia/docker-autobackup@main
+#      - Jahia/docker-jahia-cloud@main
+#      - Jahia/docker-papi@main
+#      - Jahia/jahiastic-jahia@main
+#      - Jahia/jahiastic-jcustomer@main
+#      - Jahia/jelastic-packages@main
+#      - Jahia/paas-ansible@main
+#      - Jahia/paas-build-rpms@main
+#      - Jahia/paas-monitoring@main
+#      - Jahia/papi-k8s@main
+#      - Jahia/papi-terraform-provider@main
+#      - Jahia/pylastic@main
