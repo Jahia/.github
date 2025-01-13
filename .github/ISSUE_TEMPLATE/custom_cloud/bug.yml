@@ -1,0 +1,28 @@
+# WARNING: This template file is coming from the .github repository
+# Only edit the file there
+# Documentation: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+
+name: Bug
+description: File a bug report
+type: Bug
+projects: ["Jahia/31"]
+body:
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Detailed steps needed to reproduce the issue, including all useful information such as which platform, which product versions...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Current Behavior
+      description: Description of the current behavior, including logs, stack traces, screenshots/videos, link to CI execution...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Desired Behavior
+      description: Description of the expected behavior and how it differs from the current one.
+    validations:
+      required: true
