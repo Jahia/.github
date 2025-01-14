@@ -13,6 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: wadackel/files-sync-action@v3
         with:
-          github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
+          github_token: ${{ secrets.GH_JAHIA_CLOUD_TOKEN }}
           config_file: .github/cloud-file-sync-config.yml
-
