@@ -1,0 +1,21 @@
+---
+name: Spike
+description: Create a spike
+type: Spike
+projects: ["Jahia/31"]
+body:
+  - type: textarea
+    attributes:
+      label: Context
+  - type: textarea
+    attributes:
+      label: Goal
+      value: "*The goal of the spike is to* "
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Outcome
+      placeholder: Story ? POC ? Documentation ?
+    validations:
+      required: true

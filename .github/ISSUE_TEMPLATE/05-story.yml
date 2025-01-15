@@ -1,0 +1,31 @@
+---
+name: User Story
+description: Create a user story
+type: Story
+body:
+  - type: textarea
+    attributes:
+      label: Story
+      value: |
+        **As a** 
+
+        **I want to** 
+
+        **In order to**
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance criteria
+      value: |
+        **Given** 
+
+        **When** 
+
+        **Then**
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Notes
+      placeholder: Useful information (Technical, Design)

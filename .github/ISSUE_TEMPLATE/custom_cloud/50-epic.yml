@@ -1,0 +1,11 @@
+---
+name: Epic
+description: Create an epic
+type: Epic
+projects: ["Jahia/18"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+    validations:
+      required: true

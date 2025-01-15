@@ -1,0 +1,29 @@
+---
+name: Epic
+description: Create an epic
+type: Epic
+projects: ["Jahia/18"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      value: |
+        **As a** 
+
+        **I want to** 
+
+        **In order to** 
+
+        ### Non-functional requirements
+        - Security
+          - Identity management
+          - Authentication
+          - Authorization
+          - Session management
+          - Data validation
+          - Error handling
+        - Performances
+        - Migration
+        - Documentation
+    validations:
+      required: true

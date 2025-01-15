@@ -29,6 +29,11 @@ patterns:
       # - .github/workflows/delivery-pr-chores.yml
     delete_files:
       - .github/ISSUE_TEMPLATE/cloud-change-request.yml
+      - .github/ISSUE_TEMPLATE/bug.yml
+      - .github/ISSUE_TEMPLATE/epic.md
+      - .github/ISSUE_TEMPLATE/other.md
+      - .github/ISSUE_TEMPLATE/spike.md
+      - .github/ISSUE_TEMPLATE/story.md
     repositories:
       # An updated version of this list can be obtained by running this 
       # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml

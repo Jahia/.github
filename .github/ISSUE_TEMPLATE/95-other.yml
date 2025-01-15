@@ -1,0 +1,11 @@
+---
+name: Other
+description: Create a GitHub issue without using a template
+labels: ["need-triage"]
+type: Task
+body:
+  - type: textarea
+    attributes:
+      label: Description
+    validations:
+      required: true

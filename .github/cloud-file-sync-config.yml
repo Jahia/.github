@@ -24,6 +24,12 @@ patterns:
           - '**/custom_*/*'
       - from: .github/ISSUE_TEMPLATE/custom_cloud
         to: .github/ISSUE_TEMPLATE
+    delete_files:
+      - .github/ISSUE_TEMPLATE/bug.yml
+      - .github/ISSUE_TEMPLATE/epic.md
+      - .github/ISSUE_TEMPLATE/other.md
+      - .github/ISSUE_TEMPLATE/spike.md
+      - .github/ISSUE_TEMPLATE/story.md
     repositories:
       # An updated version of this list can be obtained by running this 
       # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-cloud-repos.yml

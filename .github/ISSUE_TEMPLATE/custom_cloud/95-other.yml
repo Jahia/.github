@@ -1,0 +1,11 @@
+---
+name: Other
+description: Create a GitHub issue without using a template
+type: Other
+projects: ["Jahia/31"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+    validations:
+      required: true
