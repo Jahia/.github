@@ -41,6 +41,7 @@ patterns:
        - Jahia/asset-webpack-example@main
        - Jahia/assets@master
        - Jahia/atmosphere@master
+       - Jahia/sandbox@main
       #  - Jahia/augmented-search@master
       #  - Jahia/augmented-search-custom-configuration@master
       #  - Jahia/augmented-search-package@master
