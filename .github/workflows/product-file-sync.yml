@@ -11,6 +11,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Import GPG key
+        shell: bash
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep 'sec' | awk '{print $2}' | cut -d'/' -f2)
+          echo "KEY_ID=$KEY_ID" >> $GITHUB_ENV
+
+      - name: Trust GPG key
+        shell: bash
+        run: |
+          echo -e "5\ny\n" | gpg --command-fd 0 --batch --edit-key ${{ env.KEY_ID }} trust
+
+      - name: Configure Git to use GPG key
+        shell: bash
+        run: |
+          git config --global user.signingkey ${{ env.KEY_ID }}
+          git config --global commit.gpgSign true
+          git config --global user.name "Jahia Continuous Integration account"
+          git config --global user.email "jahia-ci@jahia.com"
+
       - uses: fgerthoffert/files-sync-action@v3.6.1
         with:
           github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
