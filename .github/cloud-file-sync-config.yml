@@ -6,7 +6,7 @@ settings:
       - chore
     merge: 
       mode: admin
-      strategy: squash
+      strategy: merge
       delete_branch: true      
   commit: 
     format: '<%- prefix %>: <%- subject %>'
