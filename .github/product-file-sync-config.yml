@@ -27,6 +27,8 @@ patterns:
       - .github/workflows/delivery-issue-chores.yml
       # Skipping the PR chores workflow until right before the migration to GitHub issues
       # - .github/workflows/delivery-pr-chores.yml
+    delete_files:
+      - .github/ISSUE_TEMPLATE/cloud-change-request.yml
     repositories:
       # An updated version of this list can be obtained by running this 
       # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml
