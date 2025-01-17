@@ -35,6 +35,6 @@ body:
     validations:
       required: true
       placeholder: |
-        1. Environment used (docker, installer, browser version)
-        2. Logs (server-side, browser) & stack trace
-        3. Screenshots/videos
+        1. environment used (docker, installer, browser version)
+        2. logs (server-side, browser) & stack trace
+        3. screenshots/videos
