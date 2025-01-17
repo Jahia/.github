@@ -39,4 +39,6 @@ jobs:
         with:
           github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
           config_file: .github/product-file-sync-config.yml
+          private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
