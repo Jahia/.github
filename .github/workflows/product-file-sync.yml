@@ -12,30 +12,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Import GPG key
-        shell: bash
-        run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
-          KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep 'sec' | awk '{print $2}' | cut -d'/' -f2)
-          echo "KEY_ID=$KEY_ID" >> $GITHUB_ENV
+      #- name: Import GPG key
+      #  shell: bash
+      #  run: |
+      #    echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+      #    KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep 'sec' | awk '{print $2}' | cut -d'/' -f2)
+      #    echo "KEY_ID=$KEY_ID" >> $GITHUB_ENV
 
-      - name: Add the custom gpg siging program that passes the passphrase to the gpg CLI
-        run: |
-          rm -rf /tmp/gpg.sh
-          echo '#!/bin/bash' >> /tmp/gpg.sh
-          echo 'gpg --batch --pinentry-mode=loopback --passphrase "${{ secrets.GPG_PASSPHRASE }}" $@' >> /tmp/gpg.sh
-          chmod +x /tmp/gpg.sh
+      #- name: Add the custom gpg siging program that passes the passphrase to the gpg CLI
+      #  run: |
+      #    rm -rf /tmp/gpg.sh
+      #    echo '#!/bin/bash' >> /tmp/gpg.sh
+      #    echo 'gpg --batch --pinentry-mode=loopback --passphrase "${{ secrets.GPG_PASSPHRASE }}" $@' >> /tmp/gpg.sh
+      #    chmod +x /tmp/gpg.sh
 
-      - name: Configure Git to use GPG key
-        shell: bash
-        run: |
-          git config --global user.signingkey ${{ env.KEY_ID }}
-          git config --global commit.gpgSign true
-          git config --global user.name "Jahia Continuous Integration account"
-          git config --global user.email "jahia-ci@jahia.com"
-          git config --global gpg.program /tmp/gpg.sh
+      #- name: Configure Git to use GPG key
+      #  shell: bash
+      #  run: |
+      #    git config --global user.signingkey ${{ env.KEY_ID }}
+      #    git config --global commit.gpgSign true
+      #    git config --global user.name "Jahia Continuous Integration account"
+      #    git config --global user.email "jahia-ci@jahia.com"
+      #    git config --global gpg.program /tmp/gpg.sh
 
-      - uses: fgerthoffert/files-sync-action@v3.6.1
+      - uses: rknj/files-sync-action@main
         with:
           github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
           config_file: .github/product-file-sync-config.yml
