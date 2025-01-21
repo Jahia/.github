@@ -168,6 +168,7 @@ patterns:
        - Jahia/org.ops4j.pax.web@main
        - Jahia/OSGi-modules-samples@master
        - Jahia/personal-api-tokens@main
+       - Jahia/pm@main
        - Jahia/preview-cloud@main
        - Jahia/preview-env@master
        - Jahia/profile@master
