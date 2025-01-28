@@ -1,6 +1,6 @@
 This folder contains tools and scripts useful when using GitHub
 
-## tampermonkey-support-tickets.js
+### tampermonkey-support-tickets.js
 
 After installer the Chrome Extension "Tampermonkey", this script will build links to customer tickets from the "Support tickets" field in the Customers project.
 
