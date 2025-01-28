@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub Issue Jira Links
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Add a section below the GitHub issue description with Jira tickets listed from the "Support tickets" field.
 // @author       Fgerthoffert
 // @match        https://github.com/*/*/issues/*
@@ -73,8 +73,8 @@
         jiraSection.style.marginTop = '20px';
 
         jiraSection.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
-              <span style="font-size: 12px; font-weight: bold;">Support Tickets:</span>
+          <div style="display: flex; align-items: center; gap: 2px; font-size: 14px;">
+              <span style="font-size: 12px; font-weight: bold;">Jira Tickets:</span>
               <div style="display: flex; flex-wrap: nowrap; gap: 10px; overflow-x: auto;">
                   ${ticketIDs
                     .map(ticketID => `<span style="background-color: #f1f8ff; padding: 5px 10px; border-radius: 5px; white-space: nowrap; font-size: 12px;"><a href="${jiraBaseURL}${ticketID}" target="_blank" style="text-decoration: none; color: #0366d6;">${ticketID}</a></span>`)
@@ -84,7 +84,7 @@
       `;
 
         // Find the description container and append the new section below it.
-        const descriptionContainer = document.querySelector('[data-testid="issue-viewer-issue-container"]');
+        const descriptionContainer = document.querySelector('[data-testid="issue-metadata-fixed"] > div');
         if (descriptionContainer) {
             descriptionContainer.appendChild(jiraSection);
         }
