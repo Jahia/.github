@@ -95,6 +95,7 @@ patterns:
        - Jahia/graphql-java-servlet@master
        - Jahia/html-filtering@main
        - Jahia/izpack@4.3
+       - Jahia/ISMS-product@main
        - Jahia/jaas-authentication-valve@master
        - Jahia/jackrabbit@trunk
        - Jahia/jahia-administration@master
@@ -140,6 +141,7 @@ patterns:
        - Jahia/jexperience-condition-example@master
        - Jahia/jexperience-dashboards@main
        - Jahia/jexperience-forms-bridge@master
+       - Jahia/jira-archives@main
        - Jahia/jquery@master
        - Jahia/karaf-cellar@cellar-4.1.3-jahia-fixes
        - Jahia/keepicker@main
