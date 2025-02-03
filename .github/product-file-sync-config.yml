@@ -25,8 +25,7 @@ patterns:
       - from: .github/ISSUE_TEMPLATE/custom_product
         to: .github/ISSUE_TEMPLATE
       - .github/workflows/delivery-issue-chores.yml
-      # Skipping the PR chores workflow until right before the migration to GitHub issues
-      # - .github/workflows/delivery-pr-chores.yml
+      - .github/workflows/delivery-pr-chores.yml
     delete_files:
       - .github/ISSUE_TEMPLATE/cloud-change-request.yml
     repositories:
