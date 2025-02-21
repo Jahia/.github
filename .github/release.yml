@@ -7,7 +7,6 @@ changelog:
   exclude:
     labels:
       - ignore-for-release
-      - no-changelog
   categories:
     - title: Breaking Changes
       labels:
@@ -23,3 +22,6 @@ changelog:
     - title: Other Changes
       labels:
         - "*"
+    - title: Excluded (needs review)
+      labels:
+        - no-changelog
