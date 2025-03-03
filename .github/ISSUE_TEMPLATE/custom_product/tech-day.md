@@ -7,7 +7,7 @@ labels: ['Tech Day', 'Area:Tech']
 
 ---
 
-The goal of this ticket is to work on technical debt for a ticket within a fixed time window of 1 day.
+The goal of this ticket is to work on technical debt for a repository within a fixed time window of 1 day.
 
 ## Organizing of your day
 
@@ -35,8 +35,12 @@ Please fill the checklist available in this ticket, priorities are available as 
 This checklist is focused on a classic Jahia repository (module, app)
 
 ### General
-- [ ] 🚨 I reviewed all OPEN TECH tickets created for that codebase (using fixVersion=codebase-X.Y.Z-SNAPSHOT)
+- [ ] 🚨 I reviewed all OPEN TECH tickets created for that codebase (using codebase-X.Y.Z milestone)
 - [ ] 🚨 I reviewed older tech day tickets for that codebase
+- [ ] 🟠 Standards have been discussed in a tech kumite in the past semester
+### Dependency management
+- [ ] 🔝 I've identified the process/tools to handle dependency updates (ex: [renovate](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2071358/3rd-party+libraries+-+Ref+ISPOL08.A14024#%5BinlineExtension%5DRenovate))
+- [ ] 🙏 Remove unused libraries
 ### Javascript
 - [ ] 🔝 The module's webpack config is correct ([sample](https://github.com/Jahia/jcontent/blob/master/webpack.config.js))
 - [ ] 🔝 The module is using a supported LTS version of ([NodeJS](https://nodejs.org/en/about/previous-releases))
@@ -49,29 +53,36 @@ This checklist is focused on a classic Jahia repository (module, app)
 - [ ] 🟠 Dependencies listed in packages.json are no more than 2 major versions behind their latest release
 - [ ] 🟠 Linting is executed properly and show no warnings
 - [ ] 🟠 No warning are presents in the browser console when using the app
+- [ ] 🙏 Remove unreachable code
 ### Java
 - [ ] 🔝 Java dependencies are explicitly declared in the module's pom.xml
 - [ ] 🔝 Spring is not used in the module
 - [ ] 🔝 No warnings or errors are present when building the module locally or on GitHub Actions
 - [ ] 🟠 No code smell on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
+- [ ] 🙏 Remove unreachable code
 ### Security
-- [ ] 🔝 Our security lead confirmed there are no known security vulnerabilities affecting this codebase
+- [ ] 🔝 Review the [security vulnerabilities](ndency-track-prod.jahia.com/projects) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
 ### QA
 - [ ] 🔝 Automated tests are using jahia-cypress for all utils functions
 - [ ] 🔝 The test framework is using page-object models published by other modules
 - [ ] 🔝 The test framework is publishing its own page-object models for use by others
+- [ ] 🟠 A manual-run workflow is available
 - [ ] 🙏 Automated tests are using a recent version of Cypress
 - [ ] 🙏 Automated tests are only relying on supported modules
 ### CI/CD
 - [ ] 🔝 The build and the release workflows use the JDK 11 image (only if Jahia Parent is set to 8.2.0.0+)
 - [ ] 🔝 GitHub Actions (nightlys and other workflows) are executed without warnings (such as depreciations)
 - [ ] 🙏 The latest version of the actions are used (including jahia-modules-action)
+- [ ] 🙏 The [reusable workflows](https://github.com/Jahia/jahia-modules-action/tree/main/.github/workflows) are used
 ### Documentation
+- [ ] 🔝 Readme.md is up-to-date (module purpose, technical details, configuration steps)
+- [ ] 🟠 A tech roadmap is available 
 - [ ] 🙏 Module's documentation available on the academy is up-to-date
+### Issues
+- [ ] 🟠 If the repository is public, review the issues/pull requests from the community and give feedback
 ### GitHub
 - [ ] 🟠 [Branch protection](https://confluence.jahia.com/display/PR/GitHub+%28Product%29+-+Ref+ISPOL08.A14025#GitHub(Product)RefISPOL08.A14025-Branchprotection) is enabled for the repository
 - [ ] **Automatically delete head branches** is selected in **Settings**
-- [ ] 🙏 The repository contains a README.md file
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
 - [ ] 🙏 Stale branches or branches older than 2 years (non-maintenance branches) have been removed
 
