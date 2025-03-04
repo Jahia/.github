@@ -34,7 +34,7 @@ When creating such tickets, try to provide details about complexity of such an i
 
 ## Checklist
 
-This checklist is there to help you but is not exaustive, if some items are not relevant or should be added, please submit a ticket.
+This checklist is there to help you but is not exaustive, if some items are not relevant or should be added, [please request a change](https://github.com/Jahia/.github/blob/master/.github/ISSUE_TEMPLATE/custom_product/tech-day.md).
 
 ### General
 - [ ] 🚨 I reviewed all OPEN TECH tickets created for that codebase (using codebase-X.Y.Z milestone)
