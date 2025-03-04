@@ -27,10 +27,10 @@ When creating such tickets, try to provide details about complexity of such an i
 
 ## About priorities
 
-🚨 Indicates a required item, to be looked at
-🔝 Indicates a top priority item
-🟠 Indicates a medium priority item
-🙏 Indicates a low priority item
+* 🚨 Indicates a required item, to be looked at
+* 🔝 Indicates a top priority item
+* 🟠 Indicates a medium priority item
+* 🙏 Indicates a low priority item
 
 ## Checklist
 
