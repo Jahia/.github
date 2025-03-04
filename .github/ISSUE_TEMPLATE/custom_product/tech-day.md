@@ -7,32 +7,34 @@ labels: ['Tech Day', 'Area:Tech']
 
 ---
 
-The goal of this ticket is to work on technical debt for a repository within a fixed time window of 1 day.
+The goal of this issue is to work on technical debt for a repository as part of the codebase ownership initiative. It is organized around team members regularly reviewing the state of codebases.
 
-## Organizing of your day
+Creating a tech day ticket is not required to work on tech debt, but can be a helpful resource to identify areas of focus.
 
-One day will NOT be sufficient to address technical debt for the codebase, organizing your day is key to wrap-up the tasks with concrete deliverable.
+## Recommendations
 
-We recommend following this schedule:
-- Begin by spending 1 hour to go over the checklist attached to this ticket, identify activities you would be able to complete within the day and create tickets for activities that would require more work or that you don't expect to complete. Make sure to link these new ticket to the techday ticket and to attach it to the checklist.
-- Work on items identified during the first hour.
-- Wrap up your day by spending 1 hour to document the changes you did, provide instructions for testing and eventually to give pointers to the next person working on a techday ticket for this codebase.
+You will not be able to address the entierety of a codebase tech debt in one go, organization is key to make sure you wrap-up time spent on a codebase with concrete deliverables.
+
+When dedicating a fixed amount of time on a codebase, we recommend the following schedule:
+- Begin by reviewing the checklist attached to this ticket, identify and prioritize activities you would be able to complete within the dedicated time.
+- Work on said items.
+- Wrap up by briefly documenting the changes you did, provide instructions for testing and eventually create issues for activities you'd like to work on next. You can do so by adding a comment to this issue.
 
 ## Create tickets for future work
-Not all tech debt items can be addressed within a day, the goal of this day is also to raise awareness about tech debt to be tackled in the future.
+Not all tech debt items can be addressed in one day, one of the goal of the ownership initiative is also to raise awareness about tech debt to be tackled in the future.
 
-If you see a non-compliant element but you didn't get a chance to work on it, please create the corresponding ticket, attach it to the next fixVersion of the codebase and link it in this ticket.
+When creating such tickets, try to provide details about complexity of such an implementation. These elements play a role in our capacity to prioritize work.
 
-Please fill the checklist available in this ticket, priorities are available as a guideline as to what we consider more or less important for each of the tech areas:
+## About priorities
 
-🚨 Indicates a required item, to be looked at during the day
+🚨 Indicates a required item, to be looked at
 🔝 Indicates a top priority item
 🟠 Indicates a medium priority item
 🙏 Indicates a low priority item
 
-## Tech day checklist
+## Checklist
 
-This checklist is focused on a classic Jahia repository (module, app)
+This checklist is there to help you but is not exaustive, if some items are not relevant or should be added, please submit a ticket.
 
 ### General
 - [ ] 🚨 I reviewed all OPEN TECH tickets created for that codebase (using codebase-X.Y.Z milestone)
@@ -41,6 +43,8 @@ This checklist is focused on a classic Jahia repository (module, app)
 ### Dependency management
 - [ ] 🔝 I've identified the process/tools to handle dependency updates (ex: [renovate](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2071358/3rd-party+libraries+-+Ref+ISPOL08.A14024#%5BinlineExtension%5DRenovate))
 - [ ] 🙏 Remove unused libraries
+### Jahia Modules
+- [ ] 🚨 If the codebase is a module shipped with the distribution, the latest version with changes is configured in jahia-pack ([core](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml) or [additional-modules](https://github.com/Jahia/jahia-pack-private/blob/master/additional-modules/pom.xml))
 ### Javascript
 - [ ] 🔝 The module's webpack config is correct ([sample](https://github.com/Jahia/jcontent/blob/master/webpack.config.js))
 - [ ] 🔝 The module is using a supported LTS version of ([NodeJS](https://nodejs.org/en/about/previous-releases))
@@ -61,32 +65,34 @@ This checklist is focused on a classic Jahia repository (module, app)
 - [ ] 🟠 No code smell on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
 - [ ] 🙏 Remove unreachable code
 ### Security
-- [ ] 🔝 Review the [security vulnerabilities](ndency-track-prod.jahia.com/projects) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
-### QA
+- [ ] 🔝 Review the [security vulnerabilities](https://dependency-track-prod.jahia.com/) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
+### QA / Automated Tests
+- [ ] 🚨 The codebase is compatible with the latest release of Jahia
 - [ ] 🔝 Automated tests are using jahia-cypress for all utils functions
 - [ ] 🔝 The test framework is using page-object models published by other modules
 - [ ] 🔝 The test framework is publishing its own page-object models for use by others
 - [ ] 🟠 A manual-run workflow is available
+- [ ] 🟠 Instructions and [test cases](https://jahia.testrail.net/index.php?/dashboard) are available to document how a release should be tested
 - [ ] 🙏 Automated tests are using a recent version of Cypress
 - [ ] 🙏 Automated tests are only relying on supported modules
 ### CI/CD
 - [ ] 🔝 The build and the release workflows use the JDK 11 image (only if Jahia Parent is set to 8.2.0.0+)
-- [ ] 🔝 GitHub Actions (nightlys and other workflows) are executed without warnings (such as depreciations)
+- [ ] 🔝 GitHub Actions (nightlys and other workflows) are executed without warnings nor errors (such as depreciations, failed tests, ...)
 - [ ] 🙏 The latest version of the actions are used (including jahia-modules-action)
-- [ ] 🙏 The [reusable workflows](https://github.com/Jahia/jahia-modules-action/tree/main/.github/workflows) are used
+- [ ] 🙏 GitHub Actions [reusable workflows](https://github.com/Jahia/jahia-modules-action/tree/main/.github/workflows) are used
 ### Documentation
 - [ ] 🔝 Readme.md is up-to-date (module purpose, technical details, configuration steps)
 - [ ] 🟠 A tech roadmap is available 
 - [ ] 🙏 Module's documentation available on the academy is up-to-date
 ### Issues
-- [ ] 🟠 If the repository is public, review the issues/pull requests from the community and give feedback
+- [ ] 🟠 If the repository is public, issues/pull requests from the community have been reviewed and answered, if answer was not possible, a PM/DM was notified.
 ### GitHub
 - [ ] 🟠 [Branch protection](https://confluence.jahia.com/display/PR/GitHub+%28Product%29+-+Ref+ISPOL08.A14025#GitHub(Product)RefISPOL08.A14025-Branchprotection) is enabled for the repository
 - [ ] **Automatically delete head branches** is selected in **Settings**
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
 - [ ] 🙏 Stale branches or branches older than 2 years (non-maintenance branches) have been removed
 
-## Fork day checklist
+## Fork checklist
 
 This checklist is focused on our forked repositories
 
