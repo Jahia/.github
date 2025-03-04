@@ -45,6 +45,11 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🙏 Remove unused libraries
 ### Jahia Modules
 - [ ] 🚨 If the codebase is a module shipped with the distribution, the latest version with changes is configured in jahia-pack ([core](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml) or [additional-modules](https://github.com/Jahia/jahia-pack-private/blob/master/additional-modules/pom.xml))
+### Codebase management
+- [ ] 🟠 I reviewed opportunities to remove dead/unused/unreachable code
+- [ ] 🙏 I reviewed opportunities to merge codebases within the repository
+- [ ] 🟠 No code smell on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
+- [ ] 🔝 No warnings or errors are present when building the module locally or on GitHub Actions
 ### Javascript
 - [ ] 🔝 The module's webpack config is correct ([sample](https://github.com/Jahia/jcontent/blob/master/webpack.config.js))
 - [ ] 🔝 The module is using a supported LTS version of ([NodeJS](https://nodejs.org/en/about/previous-releases))
@@ -61,9 +66,6 @@ This checklist is there to help you but is not exaustive, if some items are not 
 ### Java
 - [ ] 🔝 Java dependencies are explicitly declared in the module's pom.xml
 - [ ] 🔝 Spring is not used in the module
-- [ ] 🔝 No warnings or errors are present when building the module locally or on GitHub Actions
-- [ ] 🟠 No code smell on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
-- [ ] 🙏 Remove unreachable code
 ### Security
 - [ ] 🔝 Review the [security vulnerabilities](https://dependency-track-prod.jahia.com/) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
 ### QA / Automated Tests
