@@ -5,7 +5,7 @@ When lists are present, the item can be:
  - Checked: The item has been done
 -->
 
-## Description
+### Description
 
 <!-- 
 Please describe what your change is about. 
@@ -13,33 +13,22 @@ If you made specific implementation choices worth an explanation, those can be d
 -->
 ...
 
-## Tests
+### Checklist
 
-The following are included in this PR
-- [ ] Unit Tests (Most changes _should_ have unit tests)
-- [ ] Integration Tests
+#### Source code
+- [ ] I've considered the implications on security (in particular for changes to authentication, authorization, data fetching, ...)
+- [ ] I've considered the implications on performances
+- [ ] I've considered the implications on migration
+- [ ] I've considered the implications on code maintainability
 
-## Checklist
+#### Tests
+- [ ] I've provided Unit Tests (Most changes _should_ have unit tests)
+- [ ] I've provided Integration Tests
 
-<!-- 
-This section contains a set of non-automated checks, it is there to remind you to think about some business critical topics. 
-If some are not applicable they could simply be deleted deleted.
-If you need to provide more details, please use the description section.
--->
+#### Documentation
+- [ ] I've provided inline documentation (Source code)
+- [ ] I've provided internal documentation (README, Confluence)
+- [ ] I've provided  user-facing documentation (Academy)
 
-I have considered the following implications of my change: 
-
-- [ ] Security (in particular for changes to authentication, authorization, data fetching, ...)
-- [ ] Performance
-- [ ] Migration
-- [ ] Code maintainability
-
-## Documentation
-
-<!-- 
-Indicate if you have been writing documentation has part of this change.
--->
-
-- [ ] Inline documentation
-- [ ] Internal Documentation (wiki)
-- [ ] User-facing Documentation
+> [!TIP]
+> Documentation to guide the reviews: [How to do a code review](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064660/How+to+do+a+code+review+-+Ref+ISSOP08.A14006)
