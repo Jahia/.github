@@ -1,20 +1,7 @@
-<!--
-When lists are present, the item can be:
- - Deleted: The item is not applicable to the PR
- - Unchecked: The item is not done yet, but should be done as part of the PR
- - Checked: The item has been done
--->
-
 ### Description
-
-<!-- 
-Please describe what your change is about. 
-If you made specific implementation choices worth an explanation, those can be detailed in this section 
--->
 ...
 
 ### Checklist
-
 #### Source code
 - [ ] I've considered the implications on security (in particular for changes to authentication, authorization, data fetching, ...)
 - [ ] I've considered the implications on performances
