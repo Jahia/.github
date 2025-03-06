@@ -9,8 +9,7 @@
 - [ ] I've considered the implications on code maintainability
 
 #### Tests
-- [ ] I've provided Unit Tests (Most changes _should_ have unit tests)
-- [ ] I've provided Integration Tests
+- [ ] I've provided Unit and/or Integration Tests
 - [ ] I've updated the parent issue with required manual validations
 
 #### Documentation
