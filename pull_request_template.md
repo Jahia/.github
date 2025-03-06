@@ -11,11 +11,12 @@
 #### Tests
 - [ ] I've provided Unit Tests (Most changes _should_ have unit tests)
 - [ ] I've provided Integration Tests
+- [ ] I've updated the parent issue with required manual validations
 
 #### Documentation
 - [ ] I've provided inline documentation (Source code)
 - [ ] I've provided internal documentation (README, Confluence)
-- [ ] I've provided  user-facing documentation (Academy)
+- [ ] I've provided user-facing documentation (Academy)
 
 > [!TIP]
 > Documentation to guide the reviews: [How to do a code review](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064660/How+to+do+a+code+review+-+Ref+ISSOP08.A14006)
