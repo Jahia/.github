@@ -1,0 +1,19 @@
+name: Product - Sync Labels across repositories
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # 3 AM Sunday
+  workflow_dispatch:
+
+jobs:
+  sync-product-repos-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync Labels across Product repositories
+        uses: fgerthoffert/actions-sync-labels@v1.0.0
+        with:
+          org: jahia
+          token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
+          src_repository: .github
+          filter_topics: product
+          filter_operator: OR

@@ -1,4 +1,4 @@
-name: Delivery - Sync Labels across repositories
+name: Cloud - Sync Labels across repositories
 
 on:
   schedule:
@@ -6,15 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync-repos-labels:
+  sync-cloud-repos-labels:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync Labels across repositories
+      - name: Sync Labels across Cloud repositories
         uses: fgerthoffert/actions-sync-labels@v1.0.0
         with:
           org: jahia
-          token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
+          token: ${{ secrets.GH_JAHIA_CLOUD_TOKEN }}
           src_repository: .github
-          filter_topics: product,cloud,community
+          filter_topics: cloud
           filter_operator: OR
-
