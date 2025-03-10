@@ -42,6 +42,7 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🟠 Standards have been discussed in a tech kumite in the past semester
 ### Dependency management
 - [ ] 🔝 I've identified the process/tools to handle dependency updates (ex: [renovate](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2071358/3rd-party+libraries+-+Ref+ISPOL08.A14024#%5BinlineExtension%5DRenovate))
+- [ ] 🟠 Ensure licenses used by the libraries are [Jahia compliant](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2068350/License+check+-+Ref+ISSOP08.A14020)
 - [ ] 🙏 Remove unused libraries
 ### Jahia Modules
 - [ ] 🚨 If the codebase is a module shipped with the distribution, the latest version with changes is configured in jahia-pack ([core](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml) or [additional-modules](https://github.com/Jahia/jahia-pack-private/blob/master/additional-modules/pom.xml))
