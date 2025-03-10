@@ -40,6 +40,7 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🚨 I reviewed all OPEN TECH tickets created for that codebase (using codebase-X.Y.Z milestone)
 - [ ] 🚨 I reviewed older tech day tickets for that codebase
 - [ ] 🟠 Standards have been discussed in a tech kumite in the past semester
+- [ ] 🙏 Module's license is up-to-date (see https://github.com/Jahia/open-source/blob/master/README.md#licenses)
 ### Dependency management
 - [ ] 🔝 I've identified the process/tools to handle dependency updates (ex: [renovate](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2071358/3rd-party+libraries+-+Ref+ISPOL08.A14024#%5BinlineExtension%5DRenovate))
 - [ ] 🟠 Ensure licenses used by the libraries are [Jahia compliant](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2068350/License+check+-+Ref+ISSOP08.A14020)
