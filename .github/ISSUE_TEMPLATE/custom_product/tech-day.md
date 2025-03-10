@@ -76,7 +76,7 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🔝 The test framework is using page-object models published by other modules
 - [ ] 🔝 The test framework is publishing its own page-object models for use by others
 - [ ] 🟠 A manual-run workflow is available
-- [ ] 🟠 Instructions and [test cases](https://jahia.testrail.net/index.php?/dashboard) are available to document how a release should be tested
+- [ ] 🟠 Instructions and [test cases](https://jahia.testrail.net/index.php?/dashboard) are available to document how a release should be tested (how to do the "sanity check" of this module)
 - [ ] 🙏 Automated tests are using a recent version of Cypress
 - [ ] 🙏 Automated tests are only relying on supported modules
 ### CI/CD
