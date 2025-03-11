@@ -91,7 +91,7 @@ This checklist is there to help you but is not exaustive, if some items are not 
 ### Issues
 - [ ] 🟠 If the repository is public, issues/pull requests from the community have been reviewed and answered, if answer was not possible, a PM/DM was notified.
 ### GitHub
-- [ ] 🟠 [Branch protection](https://confluence.jahia.com/display/PR/GitHub+%28Product%29+-+Ref+ISPOL08.A14025#GitHub(Product)RefISPOL08.A14025-Branchprotection) is enabled for the repository
+- [ ] 🟠 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
 - [ ] **Automatically delete head branches** is selected in **Settings**
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
 - [ ] 🙏 Stale branches or branches older than 2 years (non-maintenance branches) have been removed
@@ -104,12 +104,12 @@ This checklist is focused on our forked repositories
 - [ ] 🚨 I checked that we cannot stop using a fork of the library
 - [ ] 🚨 I created pull requests to push the fixes done in our fork to the main repository
 - [ ] 🚨 I checked that we cannot upgrade to a more recent
-- [ ] 🚨 I checked that we've documented why we're still using a fork of this library in [confluence](https://confluence.jahia.com/display/PR/Releasing+our+project+forks)
+- [ ] 🚨 I checked that we've documented why we're still using a fork of this library in [confluence](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065402/Releasing+our+project+forks)
 ### Security
 - [ ] 🔝 I checked that there are no known security vulnerabilities affecting this codebase
 ### CI/CD
-- [ ] 🚨 The build and the release/publish workflows are configured (or at least documented in [confluence](https://confluence.jahia.com/display/PR/Releasing+our+project+forks))
+- [ ] 🚨 The build and the release/publish workflows are configured (or at least documented in [confluence](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065402/Releasing+our+project+forks))
 ### GitHub
-- [ ] 🟠 [Branch protection](https://confluence.jahia.com/display/PR/GitHub+%28Product%29+-+Ref+ISPOL08.A14025#GitHub(Product)RefISPOL08.A14025-Branchprotection) is enabled for the repository
+- [ ] 🟠 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
 - [ ] **Automatically delete head branches** is selected in **Settings**
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
