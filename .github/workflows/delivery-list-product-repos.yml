@@ -23,6 +23,7 @@ jobs:
         with:
           org: jahia
           token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
+          max_query_nodes: 10
           filter_topics: product
           filter_ignore_archived: true
 
