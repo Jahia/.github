@@ -55,7 +55,7 @@ Module migration
 While Testing
 - [ ] No warnings or errors are present in the browser console when testing the module
 - [ ] No warnings or errors are present in Jahia logs when testing the module (incl. migration)
-- [ ] Verified tickets present in the release are actually included in the release artifact
+- [ ] Select a random set of fixes from the release and verify them on the minimum jahia-version
 
 After Testing
 - [ ] Tested combinations (Jahia versions, modules versions) are listed in this released ticket
