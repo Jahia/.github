@@ -30,8 +30,7 @@ Desired Jahia Version: 8.X.X.X
 In the testing matrix, always use the latest patch version of a particular release
 
 The following combinations should be validated:
- - Jahia 8.1.7.0
- - Jahia 8.2.1.0
+ - minimum Jahia version (according to the pom.xml)
 
 :information_source: If you are releasing for the main branch of a module, make sure to complete the checklist below when working on the ticket.
 
@@ -47,7 +46,7 @@ The following combinations should be validated:
 
 General
 - [ ] Manual tests detailing testing steps for validating the release of this module are present on Testrail
-- [ ] Automated tests using the release artifacts were executed
+- [ ] Automated tests using the release artifacts were executed (also against latest release of jahia)
 
 Module migration
 - [ ] Upgrade from the previous released version of the module was tested
