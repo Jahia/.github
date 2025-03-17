@@ -6,6 +6,9 @@ type: Story
 
 ---
 
+> [!IMPORTANT]
+> Before working on this issue, ensure it follows our [Definition of Ready](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064566/Definition+of+Ready+-+Ref+ISPOL08.A140180)
+
 **As a** 
 
 **I want to** 
@@ -24,4 +27,14 @@ type: Story
 
 ### Notes
 
-Useful information (Technical, Design)
+Provide any useful information (Technical, Design)
+
+> [!IMPORTANT]
+> - [ ] Before closing this issue, ensure it follows our [Definition of Done](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2072202/Definition+of+Done+-+Ref+ISPOL08.A14030)
+
+- [ ] We've considered the implications on security (in particular for changes to authentication, authorization, data fetching, ...)
+- [ ] We've considered the implications on performances
+- [ ] We've considered the implications on migration
+- [ ] We've provided internal documentation (README, Confluence)
+- [ ] We've provided user-facing documentation (Academy)
+
