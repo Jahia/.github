@@ -162,7 +162,6 @@ patterns:
       - Jahia/news-qamf@master
       - Jahia/npm-jsx-templates-web-blue@main
       - Jahia/npm-solid-react-templateset-example@master
-      - Jahia/npm-templates-web-blue@main
       - Jahia/open-source@master
       - Jahia/opencode@main
       - Jahia/org.ops4j.pax.web@main
