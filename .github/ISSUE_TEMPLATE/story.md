@@ -31,10 +31,3 @@ Provide any useful information (Technical, Design)
 
 > [!IMPORTANT]
 > - [ ] Before closing this issue, ensure it follows our [Definition of Done](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2072202/Definition+of+Done+-+Ref+ISPOL08.A14030)
-
-- [ ] We've considered the implications on security (in particular for changes to authentication, authorization, data fetching, ...)
-- [ ] We've considered the implications on performances
-- [ ] We've considered the implications on migration
-- [ ] We've provided internal documentation (README, Confluence)
-- [ ] We've provided user-facing documentation (Academy)
-
