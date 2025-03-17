@@ -4,7 +4,7 @@
 ### Checklist
 #### Source code
 - [ ] I've shared and documented any breaking change
-- [ ] I've updated the jahia-depends
+- [ ] I've reviewed and updated the jahia-depends
 
 #### Tests
 - [ ] I've provided Unit and/or Integration Tests
