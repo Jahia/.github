@@ -7,7 +7,7 @@ type: Story
 ---
 
 > [!IMPORTANT]
-> Before working on this issue, ensure it follows our [Definition of Ready](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064566/Definition+of+Ready+-+Ref+ISPOL08.A140180)
+> - [ ] Before working on this issue, ensure it follows our [Definition of Ready](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064566/Definition+of+Ready+-+Ref+ISPOL08.A140180)
 
 **As a** 
 
