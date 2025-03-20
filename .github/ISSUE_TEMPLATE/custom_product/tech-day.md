@@ -71,7 +71,8 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🔝 Spring is not used in the module
 ### Security
 - [ ] 🚨 SBOM is generated (configuration available [here](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2071358/3rd-party+libraries+-+Ref+ISPOL08.A14024#%5BinlineExtension%5DSBOM-creation-and-OWASP-Dependency-Track)) and uploaded to [Dependency Track](https://dependency-track-prod.jahia.com/)
-- [ ] 🔝 Review the security [vulnerabilities](https://sonarqube.jahia.com/issues?resolved=false&types=VULNERABILITY) and [hotspots](https://sonarqube.jahia.com/security_hotspots?id=org.jahia.server%3Ajahia-root) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
+- [ ] 🔝 I've reviewed the security [vulnerabilities](https://sonarqube.jahia.com/issues?resolved=false&types=VULNERABILITY) and [hotspots](https://sonarqube.jahia.com/security_hotspots?id=org.jahia.server%3Ajahia-root) affecting this codebase and discussed it with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
+- [ ] 🔝 I've reviewed the [vulnerabilities](https://dependency-track-prod.jahia.com/login?redirect=%2Fprojects) affecting the libraries used by the module (related [documentation](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2079156/Analyzing+vulnerabilities+in+3rd+party+libraries)) and discussed it with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
 - [ ] 🔝 A job running Sonar checks (including OWASP Dependency Check) is executed regularly
 ### QA / Automated Tests
 - [ ] 🚨 The codebase is compatible with the latest release of Jahia
@@ -110,9 +111,10 @@ This checklist is focused on our forked repositories
 - [ ] 🚨 I checked that we've documented why we're still using a fork of this library in [confluence](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065402/Releasing+our+project+forks)
 ### Security
 - [ ] 🔝 I checked that there are no known security vulnerabilities affecting this codebase
+- [ ] 🔝 I've analyzed the [vulnerabilities](https://dependency-track-prod.jahia.com/login?redirect=%2Fprojects) (related [documentation](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2079156/Analyzing+vulnerabilities+in+3rd+party+libraries)) and discussed with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
 ### CI/CD
 - [ ] 🚨 The build and the release/publish workflows are configured (or at least documented in [confluence](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065402/Releasing+our+project+forks))
 ### GitHub
-- [ ] 🟠 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
+- [ ] 🚨 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
 - [ ] **Automatically delete head branches** is selected in **Settings**
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
