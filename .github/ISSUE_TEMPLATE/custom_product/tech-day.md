@@ -51,7 +51,7 @@ This checklist is there to help you but is not exaustive, if some items are not 
 ### Codebase management
 - [ ] 🔝 No warnings or errors are present when building the module locally or on GitHub Actions
 - [ ] 🟠 I reviewed opportunities to remove dead/unused/unreachable code
-- [ ] 🟠 No code smell on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
+- [ ] 🟠 No blocker issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
 - [ ] 🙏 I reviewed opportunities to merge codebases within the repository
 ### Javascript
 - [ ] 🔝 The module's webpack config is correct ([sample](https://github.com/Jahia/jcontent/blob/master/webpack.config.js))
@@ -70,7 +70,9 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🔝 Java dependencies are explicitly declared in the module's pom.xml
 - [ ] 🔝 Spring is not used in the module
 ### Security
-- [ ] 🔝 Review the [security vulnerabilities](https://dependency-track-prod.jahia.com/) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
+- [ ] 🚨 SBOM is generated (configuration available [here](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2071358/3rd-party+libraries+-+Ref+ISPOL08.A14024#%5BinlineExtension%5DSBOM-creation-and-OWASP-Dependency-Track)) and uploaded to [Dependency Track](https://dependency-track-prod.jahia.com/)
+- [ ] 🔝 Review the security [vulnerabilities](https://sonarqube.jahia.com/issues?resolved=false&types=VULNERABILITY) and [hotspots](https://sonarqube.jahia.com/security_hotspots?id=org.jahia.server%3Ajahia-root) affecting this codebase and discuss with the Security lead before taking action (Create a [SECURITY](https://support.jahia.com/browse/SECURITY) ticket, Close as false-positive, etc.)
+- [ ] 🔝 A job running Sonar checks (including OWASP Dependency Check) is executed regularly
 ### QA / Automated Tests
 - [ ] 🚨 The codebase is compatible with the latest release of Jahia
 - [ ] 🔝 Automated tests are using jahia-cypress for all utils functions
@@ -92,7 +94,7 @@ This checklist is there to help you but is not exaustive, if some items are not 
 ### Issues
 - [ ] 🟠 If the repository is public, issues/pull requests from the community have been reviewed and answered, if answer was not possible, a PM/DM was notified.
 ### GitHub
-- [ ] 🟠 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
+- [ ] 🚨 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
 - [ ] **Automatically delete head branches** is selected in **Settings**
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
 - [ ] 🙏 Stale branches or branches older than 2 years (non-maintenance branches) have been removed
