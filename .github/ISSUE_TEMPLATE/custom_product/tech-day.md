@@ -65,7 +65,6 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🟠 Dependencies listed in packages.json are no more than 2 major versions behind their latest release
 - [ ] 🟠 Linting is executed properly and show no warnings
 - [ ] 🟠 No warning are presents in the browser console when using the app
-- [ ] 🙏 Remove unreachable code
 ### Java
 - [ ] 🔝 Java dependencies are explicitly declared in the module's pom.xml
 - [ ] 🔝 Spring is not used in the module
@@ -79,12 +78,12 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🔝 Automated tests are using jahia-cypress for all utils functions
 - [ ] 🔝 The test framework is using page-object models published by other modules
 - [ ] 🔝 The test framework is publishing its own page-object models for use by others
-- [ ] 🟠 A manual-run workflow is available
+- [ ] 🟠 A manual-run workflow is available (ex: [manual-run.yml](https://github.com/Jahia/jcontent/blob/master/.github/workflows/manual-run.yml))
 - [ ] 🟠 Instructions and [test cases](https://jahia.testrail.net/index.php?/dashboard) are available to document how a release should be tested (how to do the "sanity check" of this module)
 - [ ] 🙏 Automated tests are using a recent version of Cypress
 - [ ] 🙏 Automated tests are only relying on supported modules
 ### CI/CD
-- [ ] 🔝 The build and the release workflows use the JDK 11 image (only if Jahia Parent is set to 8.2.0.0+)
+- [ ] 🔝 The build and the release workflows use the JDK 11 image (only if Jahia Parent is set to 8.2.0.0+) from temurin vendor
 - [ ] 🔝 GitHub Actions (nightlys and other workflows) are executed without warnings nor errors (such as depreciations, failed tests, ...)
 - [ ] 🙏 The latest version of the actions are used (including jahia-modules-action)
 - [ ] 🙏 GitHub Actions [reusable workflows](https://github.com/Jahia/jahia-modules-action/tree/main/.github/workflows) are used
