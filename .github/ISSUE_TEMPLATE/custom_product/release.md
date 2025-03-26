@@ -46,7 +46,7 @@ The following combinations should be validated:
 
 General
 - [ ] Manual tests detailing testing steps for validating the release of this module are present on Testrail
-- [ ] Automated tests using the release artifacts were executed (also against latest release of jahia)
+- [ ] Automated tests using the release artifacts were executed against the oldest and newest release of Jahia
 
 Module migration
 - [ ] Upgrade from the previous released version of the module was tested
