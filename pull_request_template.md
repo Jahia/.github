@@ -1,45 +1,14 @@
-<!--
-When lists are present, the item can be:
- - Deleted: The item is not applicable to the PR
- - Unchecked: The item is not done yet, but should be done as part of the PR
- - Checked: The item has been done
--->
-
-## Description
-
-<!-- 
-Please describe what your change is about. 
-If you made specific implementation choices worth an explanation, those can be detailed in this section 
--->
+### Description
 ...
 
-## Tests
+### Checklist
+#### Source code
+- [ ] I've shared and documented any breaking change
+- [ ] I've reviewed and updated the jahia-depends
 
-The following are included in this PR
-- [ ] Unit Tests (Most changes _should_ have unit tests)
-- [ ] Integration Tests
+#### Tests
+- [ ] I've provided Unit and/or Integration Tests
+- [ ] I've updated the parent issue with required manual validations
 
-## Checklist
-
-<!-- 
-This section contains a set of non-automated checks, it is there to remind you to think about some business critical topics. 
-If some are not applicable they could simply be deleted deleted.
-If you need to provide more details, please use the description section.
--->
-
-I have considered the following implications of my change: 
-
-- [ ] Security (in particular for changes to authentication, authorization, data fetching, ...)
-- [ ] Performance
-- [ ] Migration
-- [ ] Code maintainability
-
-## Documentation
-
-<!-- 
-Indicate if you have been writing documentation has part of this change.
--->
-
-- [ ] Inline documentation
-- [ ] Internal Documentation (wiki)
-- [ ] User-facing Documentation
+> [!TIP]
+> Documentation to guide the reviews: [How to do a code review](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064660/How+to+do+a+code+review+-+Ref+ISSOP08.A14006)

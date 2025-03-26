@@ -22,6 +22,7 @@ jobs:
         uses: fgerthoffert/actions-get-org-repos@v1.0.0
         with:
           org: jahia
+          max_query_nodes: 10
           token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
           filter_topics: cloud
           filter_ignore_archived: true
