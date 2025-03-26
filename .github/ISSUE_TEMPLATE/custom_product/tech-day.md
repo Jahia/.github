@@ -55,7 +55,6 @@ This checklist is there to help you but is not exaustive, if some items are not 
 - [ ] 🟠 No Critical/Major issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
 - [ ] 🟠 I reviewed opportunities to remove dead/unused/unreachable code
 - [ ] 🙏 No Minor/Info issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
-- [ ] 🙏 I reviewed opportunities to merge codebases within the repository
 ### Javascript
 - [ ] 🔝 The module's webpack config is correct ([sample](https://github.com/Jahia/jcontent/blob/master/webpack.config.js))
 - [ ] 🔝 The module is using a supported LTS version of ([NodeJS](https://nodejs.org/en/about/previous-releases))
