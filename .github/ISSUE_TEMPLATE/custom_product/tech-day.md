@@ -48,10 +48,13 @@ This checklist is there to help you but is not exaustive, if some items are not 
 ### Jahia Modules
 - [ ] 🚨 If the codebase is a module shipped with the distribution, the latest version with changes is configured in jahia-pack ([core](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml) or [additional-modules](https://github.com/Jahia/jahia-pack-private/blob/master/additional-modules/pom.xml))
 - [ ] 🟠 Make sure dependencies (and appropriate version if needed) are declared in **jahia-depends**
-### Codebase management
+### Static Analysis and code quality
+- [ ] 🚨 No Blocker issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
 - [ ] 🔝 No warnings or errors are present when building the module locally or on GitHub Actions
+- [ ] 🔝 The module scores "A" on every [Sonarqube](https://sonarqube.jahia.com/projects) categories for Overall Code
+- [ ] 🟠 No Critical/Major issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
 - [ ] 🟠 I reviewed opportunities to remove dead/unused/unreachable code
-- [ ] 🟠 No blocker issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
+- [ ] 🙏 No Minor/Info issues on [Sonarqube](https://sonarqube.jahia.com/projects) for the module
 - [ ] 🙏 I reviewed opportunities to merge codebases within the repository
 ### Javascript
 - [ ] 🔝 The module's webpack config is correct ([sample](https://github.com/Jahia/jcontent/blob/master/webpack.config.js))
