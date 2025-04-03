@@ -6,28 +6,27 @@ type: Story
 
 ---
 
-> [!IMPORTANT]
-> - [ ] Before working on this issue, ensure it follows our [Definition of Ready](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064566/Definition+of+Ready+-+Ref+ISPOL08.A140180)
-
-**As a** 
-
-**I want to** 
-
-**In order to** 
+### Context / Problem to solve 
 
 
-### Acceptance criteria
+### Story
+As a 
+I want to 
 
-**Given** 
+### Testable scenarios
 
-**When** 
+Given 
 
-**Then** 
+#### Case 1
+When 
+Then 
 
+#### Case N
+When 
+Then 
 
-### Notes
+### Test Strategy
+Cypress tests?
 
-Provide any useful information (Technical, Design)
+### Tech Notes
 
-> [!IMPORTANT]
-> - [ ] Before closing this issue, ensure it follows our [Definition of Done](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2072202/Definition+of+Done+-+Ref+ISPOL08.A14030)
