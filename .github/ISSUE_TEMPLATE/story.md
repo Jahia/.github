@@ -30,3 +30,5 @@ Cypress tests?
 
 ### Tech Notes
 
+### Other Notes (Doc, design)
+
