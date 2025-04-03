@@ -40,7 +40,7 @@ The following combinations should be validated:
 - [ ] Testing matrix and Minimum Jahia version are detailed
 - [ ] Jahia-parent (minimum Jahia version) was updated if requested in the ticket
 - [ ] The release workflow will [publish](https://github.com/Jahia/sandbox/commit/9a6ab10c8fbe5e11eb7fe3c6b391be2be776319b) a slack notification
-- [ ] Release creation has been triggered from the Github Release UI (https://github.com/Jahia/[module-repo]/releases/new)
+- [ ] Release creation has been triggered from the Github Release UI ([detailed documentation](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2064804/Releasing+a+module#Releasingamodule-ReleasingwithGithub))
 
 <h2 id="tests-checklist">:vertical_traffic_light: Tests checklist</h2>
 
