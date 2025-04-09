@@ -1,4 +1,6 @@
-![Jahia: Open Source Technologies for Enterprise Websites](./banner.png)
+<a href="https://www.jahia.com/en">
+  <img src="./banner.png" alt="Jahia: Open Source Technologies for Enterprise Websites"/>
+</a>
 
 ### Learn Jahia
 
@@ -21,7 +23,9 @@
 
 <p align="center">
   <small>
-    <a href="https://www.jahia.com/contact">Contact Us</a>
+    <a href="https://github.com/Jahia/jahia/issues">Report a Bug</a>
+    • <a href="https://support.jahia.com/secure/Dashboard.jspa">Customer Support</a>
+    • <a href="https://www.jahia.com/contact">Contact Us</a>
     • <a href="https://www.linkedin.com/company/jahia-solutions/">LinkedIn</a>
   </small>
 </p>
