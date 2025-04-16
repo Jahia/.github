@@ -119,5 +119,6 @@ This checklist is focused on our forked repositories
 - [ ] 🚨 The build and the release/publish workflows are configured (or at least documented in [confluence](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065402/Releasing+our+project+forks))
 ### GitHub
 - [ ] 🚨 [Branch protection](https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2067858/GitHub+Product+-+Ref+ISPOL08.A14025#Branch-protection) is enabled for the repository
+- [ ] 🟠 The repositorie uses the organization-level template for the Pull Requests, make sure the repository does not contain its own template (`.github/PULL_REQUEST_TEMPLATE.md`) that takes precedence over the organization-level one
 - [ ] 🙏 **Automatically delete head branches** is selected in **Settings**
 - [ ] 🙏 Repository topics match are populated (at a minimum: "product" and "supported")
