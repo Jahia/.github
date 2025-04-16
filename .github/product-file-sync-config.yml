@@ -201,7 +201,6 @@ patterns:
       - Jahia/skins@master
       - Jahia/spnego-authentication-valve@master
       - Jahia/spring-framework@main
-      - Jahia/static-assets-custom@main
       - Jahia/tags@master
       - Jahia/tasks@master
       - Jahia/templates-system@master
