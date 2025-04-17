@@ -10,6 +10,7 @@
       <th>For JS Developers</th>
       <th>For Java Developers</th>
       <th>For Content Editors</th>
+      <th>Knowledge Base</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,7 @@
       <td><a href="https://github.com/Jahia/javascript-modules/tree/main/docs/1-getting-started/1-dev-environment">Build a  React Website with Jahia</a></td>
       <td><a href="https://academy.jahia.com/tutorials-get-started/java-developers/running-the-docker-image">Build a JSP Website with Jahia</a></td>
       <td><a href="https://academy.jahia.com/tutorials-get-started/editorsmarketers/adding-a-new-page">Learn Jahia for Content Editors</a></td>
+      <td><a href="https://academy.jahia.com/">Jahia Academy</a></td>
     </tr>
   </tbody>
 </table>
