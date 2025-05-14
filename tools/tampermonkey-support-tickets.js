@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub Issue Jira Links
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Add a section below the GitHub issue description with Jira tickets listed from the "Support tickets" field.
 // @author       Fgerthoffert
 // @match        https://github.com/*/*/issues/*
@@ -66,7 +66,8 @@
         return ticketsFieldContent
             .trim()
             .split(',')
-            .map(ticket => ticket.trim());
+            .map(ticket => ticket.trim())
+            .filter(ticket => ticket.length > 0);
     }
 
     function createJiraSection(ticketIDs, jiraBaseURL) {
