@@ -28,7 +28,7 @@
     <a href="https://support.jahia.com/secure/Dashboard.jspa">Customer Support</a>
     • <a href="https://github.com/Jahia/jahia/issues">Report a Bug</a>
     • <a href="https://www.jahia.com/contact">Contact Us</a>
-    • <a href="https://hub.docker.com/u/jahia">Docker Hub</a>
+    • <a href="https://hub.docker.com/u/jahia">Docker Images</a>
     • <a href="https://www.linkedin.com/company/jahia-solutions/">LinkedIn</a>
   </small>
 </p>
