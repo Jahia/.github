@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub Issue Jira Links
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.5
 // @description  Add a section below the GitHub issue description with Jira tickets listed from the "Support tickets" field.
 // @author       Fgerthoffert
 // @match        https://github.com/*/*/issues/*
@@ -48,7 +48,7 @@
    function getTicketsFieldContent(project, ticketsFieldName) {
        let ticketsField;
        let fieldContent;
-       const projectFieldsEntries = Array.from(project.querySelector('div > ul > div > div').children);
+       const projectFieldsEntries = Array.from(project.querySelector('div > ul').children);
        for (const projectField of projectFieldsEntries) {
            if (projectField.textContent.includes(ticketsFieldName)) {
                console.log("Field: " + ticketsFieldName + " found in project")
@@ -57,7 +57,7 @@
        }
 
        if (ticketsField !== undefined) {
-           fieldContent = ticketsField.querySelector('li > button').textContent
+           fieldContent = ticketsField.querySelector('li > span > button').textContent
        }
        return fieldContent
    }
@@ -66,7 +66,8 @@
         return ticketsFieldContent
             .trim()
             .split(',')
-            .map(ticket => ticket.trim());
+            .map(ticket => ticket.trim())
+            .filter(ticket => ticket.length > 0);
     }
 
     function createJiraSection(ticketIDs, jiraBaseURL) {
