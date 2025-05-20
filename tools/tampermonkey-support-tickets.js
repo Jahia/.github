@@ -15,7 +15,7 @@
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/'; // Update with your Jira instance URL.
     const cfgProjectName = 'Product Team'
     const cfgTicketsFieldName = 'Jira tickets'
-    const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex'; // Update with the host containing the issue events
+    const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex/'; // Update with the host containing the issue events
 
     function findProject(projectName) {
         const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
