@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub Issue Jira Links
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  Add a section below the GitHub issue description with Jira tickets listed from the "Support tickets" field.
 // @author       Fgerthoffert
 // @match        https://github.com/*/*/issues/*
@@ -15,7 +15,7 @@
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/'; // Update with your Jira instance URL.
     const cfgProjectName = 'Product Team'
     const cfgTicketsFieldName = 'Jira tickets'
-    const cfgIssueEventsBaseURL = 'https://support.jahia.com/browse/'; // Update with the host containing the issue events
+    const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex/'; // Update with the host containing the issue events
 
     function findProject(projectName) {
         const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
@@ -133,7 +133,7 @@
             const innerDiv = phActionsDiv.querySelector('div');
             if (innerDiv) {
                 const link = document.createElement('a');
-                link.textContent = '📜';
+                link.textContent = '🕰️';
                 link.href = baseURL + "/" + issue.organization + "/" + issue.repository + "/txt/" + issue.number + ".txt";
                 link.target = '_blank'; // Open the link in a new window
                 link.title = "Display issue events (⚠️ VPN REQUIRED ⚠️)";
@@ -147,6 +147,16 @@
     }
 
     function init() {
+        // Add a link to the issue event history
+        const issue = getIssueObject(window.location.href)
+        console.log("Extracted the following about the issue:", issue);
+        if (issue.organization !== "Jahia") {
+            console.log("Organization is not Jahia, not displaying the history icon")
+        } else {
+            console.log("Displaying link to issue history disabled until: INFRA-3252")
+            addLinkToIssueEvent(issue, cfgIssueEventsBaseURL);
+        }
+
         // Expand project details first, then extract and display tickets.
         const project = findProject(cfgProjectName)
         console.log(project)
@@ -160,15 +170,7 @@
             }
         }, 1000); // Delay to ensure the expanded content is loaded.
 
-        // Add a link to the issue event history
-        const issue = getIssueObject(window.location.href)
-        console.log("Extracted the following about the issue:", issue);
-        if (issue.organization !== "Jahia") {
-            console.log("Organization is not Jahia, not displaying the history icon")
-        } else {
-            console.log("Displaying link to issue history disabled until: INFRA-3252")
-            //addLinkToIssueEvent(issue, cfgIssueEventsBaseURL);
-        }
+
     }
 
     // Run the script after the page loads completely.
