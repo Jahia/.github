@@ -13,15 +13,16 @@ type: Story
 As a 
 I want to 
 
-### Testable scenarios
+## Testable scenarios
 
-Given 
+**Setup**
+Given
 
-#### Case 1
+**Case 1**
 When 
 Then 
 
-#### Case N
+**Case N**
 When 
 Then 
 
@@ -30,5 +31,11 @@ Cypress tests?
 
 ### Tech Notes
 
+### Labels 
+En: 
+Fr: 
+De: 
+
 ### Other Notes (Doc, design)
+
 
