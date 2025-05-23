@@ -6,7 +6,7 @@ type: Story
 
 ---
 
-### Context / Problem to solve 
+### Context / Problem to solve / Design
 
 
 ### Story
@@ -35,7 +35,5 @@ Cypress tests?
 En: 
 Fr: 
 De: 
-
-### Other Notes (Doc, design)
 
 
