@@ -69,6 +69,7 @@ After Testing
 - [ ] Tested combinations (Jahia versions, modules versions) are listed in this released ticket
 - [ ] Tested scenarios not detailed in Testrail are listed in this release ticket
 - [ ] The version was updated in the [Selenium integration tests](https://github.com/Jahia/jahia-qa/blob/f4f788d56fd624174302231e3d64878cd343e515/pom.xml#L75)
+- [ ] The version was updated in [jahia-pack-private](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml)
 
 <h2 id="publication-checklist">:rocket: Publication checklist</h2>
 
