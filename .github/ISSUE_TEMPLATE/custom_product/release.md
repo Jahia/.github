@@ -69,13 +69,13 @@ After Testing
 - [ ] Tested combinations (Jahia versions, modules versions) are listed in this released ticket
 - [ ] Tested scenarios not detailed in Testrail are listed in this release ticket
 - [ ] The version was updated in the [Selenium integration tests](https://github.com/Jahia/jahia-qa/blob/f4f788d56fd624174302231e3d64878cd343e515/pom.xml#L75)
-- [ ] The version was updated in [jahia-pack-private](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml)
 
 <h2 id="publication-checklist">:rocket: Publication checklist</h2>
 
 - [ ] The release changelog was prepared
 - [ ] In case of a major release, a **Breaking Changes** section is present in the Changelog
 - [ ] The artifact was released on Nexus
+- [ ] If the module is included in Jahia distribution, [jahia-pack-private](https://github.com/Jahia/jahia-pack-private/blob/master/core-modules/pom.xml) was updated with the released version
 - [ ] If applicable, corresponding academy pages were published
 - [ ] The module was published on the store
 - [ ] The [modules releases log page](https://edit.jahia.com/jahia/page-composer/default/en/sites/academy/home/customer-center/modules-releases-log.html) on the Academy was updated
