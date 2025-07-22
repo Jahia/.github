@@ -65,6 +65,7 @@ patterns:
       - Jahia/database-connector@master
       - Jahia/default@master
       - Jahia/deleted-issues@main
+      - Jahia/delivery@main
       - Jahia/df-tests-api@master
       - Jahia/directive-filter@master
       - Jahia/distributed-sessions@master
