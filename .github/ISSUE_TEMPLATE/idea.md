@@ -3,7 +3,6 @@ name: Idea
 about: Improvements and new features requests, product feedback
 title: ''
 type: Idea
-projects: ["Jahia/59"]
 
 ---
 
