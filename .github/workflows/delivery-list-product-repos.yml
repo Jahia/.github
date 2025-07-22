@@ -19,7 +19,7 @@ jobs:
 
       - name: Get Org Repositories
         id: get-repos
-        uses: fgerthoffert/actions-get-org-repos@v1.0.0
+        uses: fgerthoffert/actions-get-org-repos@v1.3.0
         with:
           org: jahia
           token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
