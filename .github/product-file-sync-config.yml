@@ -95,6 +95,7 @@ patterns:
       - Jahia/github-actions-runners@v5.17.0
       - Jahia/graphql-core@master
       - Jahia/graphql-java-servlet@master
+      - Jahia/guest-multipart-filter@main      
       - Jahia/html-filtering@main
       - Jahia/izpack@4.3
       - Jahia/jaas-authentication-valve@master
