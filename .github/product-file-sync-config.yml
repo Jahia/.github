@@ -35,6 +35,7 @@ patterns:
       # from the list based on topics, make sure to remove them:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
+      # - Jahia/pm => The repo used by PM for their internal issues
       - Jahia/advanced-visibility@master
       - Jahia/app-shell@master
       - Jahia/asset-webpack-example@main
