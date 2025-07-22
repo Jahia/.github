@@ -35,6 +35,7 @@ patterns:
       # from the list based on topics, make sure to remove them:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
+      # - Jahia/pm => The repo used by PM for their internal issues
       - Jahia/advanced-visibility@master
       - Jahia/app-shell@master
       - Jahia/asset-webpack-example@main
@@ -64,6 +65,7 @@ patterns:
       - Jahia/database-connector@master
       - Jahia/default@master
       - Jahia/deleted-issues@main
+      - Jahia/delivery@main
       - Jahia/df-tests-api@master
       - Jahia/directive-filter@master
       - Jahia/distributed-sessions@master
@@ -93,6 +95,7 @@ patterns:
       - Jahia/github-actions-runners@v5.17.0
       - Jahia/graphql-core@master
       - Jahia/graphql-java-servlet@master
+      - Jahia/guest-multipart-filter@main      
       - Jahia/html-filtering@main
       - Jahia/izpack@4.3
       - Jahia/jaas-authentication-valve@master
@@ -167,7 +170,6 @@ patterns:
       - Jahia/org.ops4j.pax.web@main
       - Jahia/OSGi-modules-samples@master
       - Jahia/personal-api-tokens@main
-      - Jahia/pm@main
       - Jahia/preview-cloud@main
       - Jahia/preview-env@master
       - Jahia/profile@master
