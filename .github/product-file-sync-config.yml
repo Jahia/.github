@@ -113,6 +113,7 @@ patterns:
       - Jahia/jahia-dev-private@master
       - Jahia/jahia-developer-tools@master
       - Jahia/jahia-ee@master
+      - Jahia/jahia-multi-factor-authentication@main
       - Jahia/Jahia-MF-Integ-Test-Site@master
       - Jahia/jahia-modules-action@main
       - Jahia/jahia-oauth@master
