@@ -156,7 +156,6 @@ patterns:
       - Jahia/linkchecker@master
       - Jahia/lucene-solr@master
       - Jahia/luxe-jahia-demo@main
-      - Jahia/luxe-prepackaged-website@main
       - Jahia/macros@master
       - Jahia/maven-archetypes@master
       - Jahia/maven-release@master
