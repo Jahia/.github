@@ -19,7 +19,7 @@ body:
   - type: textarea
     attributes:
       label: Context / Problem
-      description: A description of the problem for which you need assistance.
+      description: A description of the problem for which you need assistance and an explanation about why it is hard to qualify.
     validations:
       required: true
   - type: textarea
@@ -40,7 +40,7 @@ body:
         3. screenshots/videos
   - type: textarea
     attributes:
-      label: Next steps
-      description: Identify the detailed next steps and their onwers (who and what) as an outcome of the beetles week
+      label: (Dev team) Next steps
+      description: Identify the detailed next steps and their owners (who and what) as an outcome of the beetles week
     validations:
       required: false
