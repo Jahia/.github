@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/Jahia/javascript-modules/blob/main/docs/1-getting-started/README.md">Build a  React Website with Jahia</a></td>
+      <td><a href="https://academy.jahia.com/tutorials-get-started/front-end-developer/introduction">Build a  React Website with Jahia</a></td>
       <td><a href="https://academy.jahia.com/training-kb/online-developer-training#developer-training">Build a JSP Website with Jahia</a></td>
       <td><a href="https://academy.jahia.com/training-kb/online-developer-training#editor-training">Learn Jahia for Content Editors</a></td>
       <td><a href="https://academy.jahia.com/">Jahia Academy</a></td>
