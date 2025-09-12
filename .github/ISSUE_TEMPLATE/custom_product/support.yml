@@ -24,6 +24,12 @@ body:
       required: true
   - type: textarea
     attributes:
+      label: Expectations
+      description: What do you expect from the product team?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
       label: Versions used
       description: The list of the versions used (Jahia, modules, jCustomer, Elasticsearch, ...).
     validations:
