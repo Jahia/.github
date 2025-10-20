@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: fgerthoffert/files-sync-action@v3.6.1
+      - uses: fgerthoffert/files-sync-action@v3.8.1
         with:
           github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
           config_file: .github/product-file-sync-config.yml
-
+          gpg_username: ${{ secrets.GPG_SIGNER_USERNAME }}
+          gpg_email: ${{ secrets.GPG_SIGNER_EMAIL }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
