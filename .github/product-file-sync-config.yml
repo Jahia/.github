@@ -72,7 +72,6 @@ patterns:
       - Jahia/docker-elasticsearch@main
       - Jahia/docker-openldap@master
       - Jahia/drools@master
-      - Jahia/dummy-csrf-test-module@master
       - Jahia/dx-tests-specs@master
       - Jahia/ehcache@master
       - Jahia/el-spec@master
