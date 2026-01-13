@@ -36,6 +36,8 @@ patterns:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
       # - Jahia/pm => The repo used by PM for their internal issues
+      # Though not supported, the following repos should also be present in the list:
+      # - Jahia/formidable => The repo used by PM for their internal issues
       - Jahia/advanced-visibility@master
       - Jahia/app-shell@master
       - Jahia/asset-webpack-example@main
