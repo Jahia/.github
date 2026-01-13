@@ -213,6 +213,7 @@ patterns:
       - Jahia/update-manager@master
       - Jahia/urlrewritefilter@main
       - Jahia/userDashboard@master
+      - Jahia/user-password-authentication@main
       - Jahia/visibility@master
       - Jahia/workato-unomi-connector@master
       - Jahia/workflow-extender@main      
