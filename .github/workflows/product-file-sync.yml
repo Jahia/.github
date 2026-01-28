@@ -19,3 +19,14 @@ jobs:
           gpg_email: ${{ secrets.GPG_SIGNER_EMAIL }}
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      # After having sync'd product "supported" repositories, also
+      # sync files for a set of other repos.
+      - uses: fgerthoffert/files-sync-action@v3.8.3
+        with:
+          github_token: ${{ secrets.GH_ISSUES_PRS_CHORES }}
+          config_file: .github/other-repos-file-sync-config.yml
+          gpg_username: ${{ secrets.GPG_SIGNER_USERNAME }}
+          gpg_email: ${{ secrets.GPG_SIGNER_EMAIL }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}          
