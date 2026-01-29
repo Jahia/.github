@@ -57,7 +57,7 @@
        }
 
        if (ticketsField !== undefined) {
-           fieldContent = ticketsField.querySelector('li > span > button').textContent
+           fieldContent = ticketsField.querySelectorAll('li > span > button > span')[1].textContent
        }
        return fieldContent
    }
