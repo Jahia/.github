@@ -162,7 +162,7 @@ patterns:
       - Jahia/maven-archetypes@master
       - Jahia/maven-release@master
       - Jahia/module-manager@master
-      - Jahia/moonstone@develop
+      - Jahia/moonstone@main
       - Jahia/mvel@master
       - Jahia/news-qamf@master
       - Jahia/npm-jsx-templates-web-blue@main
