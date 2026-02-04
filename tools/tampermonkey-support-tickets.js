@@ -63,11 +63,15 @@
    }
 
     function getTicketIds(ticketsFieldContent) {
-        return ticketsFieldContent
-            .trim()
-            .split(',')
-            .map(ticket => ticket.trim())
-            .filter(ticket => ticket.length > 0);
+        if (ticketsFieldContent.includes("Enter text")) {
+            return "";
+        } else {
+            return ticketsFieldContent
+                .trim()
+                .split(',')
+                .map(ticket => ticket.trim())
+                .filter(ticket => ticket.length > 0);
+        }
     }
 
     function createJiraSection(ticketIDs, jiraBaseURL) {
