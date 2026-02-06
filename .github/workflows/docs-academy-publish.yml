@@ -1,6 +1,6 @@
 # DO NOT EDIT
 # This file is managed globally at https://github.com/Jahia/.github
-name: Update Academyu Docs
+name: Update Academy Docs
 
 # This workflow can either be triggered manually or 
 # will trigger when a PR containing changes in docs/ is merged
