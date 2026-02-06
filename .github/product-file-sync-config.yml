@@ -26,6 +26,8 @@ patterns:
         to: .github/ISSUE_TEMPLATE
       - .github/workflows/delivery-issue-chores.yml
       - .github/workflows/delivery-pr-chores.yml
+      - .github/workflows/docs-academy-update.yml
+      - .github/workflows/docs-academy-publish.yml
     delete_files:
       - .github/ISSUE_TEMPLATE/cloud-change-request.yml
     repositories:
