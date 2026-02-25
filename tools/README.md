@@ -28,6 +28,7 @@ Begin by:
  - Contact your Delivery Manager, who will be adding the token to https://github.com/Jahia/delivery under the variable GH_NOTIFICATIONS_[USERNAME]
  - Identify your Slack User ID (right click on your username in Slack, then "View profile", click on the vertical dots, and "Copy member ID")
  - Open-up a PR in the https://github.com/Jahia/delivery repository to create your own notifications workflow. Its name should be "notifications-[USERNAME].yml", you can use the following workflow as an inspiration.
+ - After receiving the first message in Slack, just add the "GitHub Notifications" App the the VIP group, this will make notifications even more obvious.
 
  Note that you can pick between two type of behavior:
   - A message containing all notifications since the last time it was executed, this fits well when you are primariraly interested in reviewing multiple notifications at once.
