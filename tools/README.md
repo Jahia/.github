@@ -35,6 +35,8 @@ Begin by:
 
 Be mindful of resource usage, even if this workflows takes less than 10s to run, on the smallest available machines, we should be cautious to not over-consume resources.
 
+More details about options are available here: https://github.com/Fgerthoffert/actions-issues-notifications
+
 ```yaml
 name: Notifications (fgerthoffert)
 
