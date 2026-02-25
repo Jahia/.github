@@ -44,7 +44,7 @@ name: Notifications (fgerthoffert)
 on:
   schedule:
     # Every hour during extended working hours (7 AM - 8 PM UTC, Mon-Fri)
-    - cron: '0 7-20 * * 1-5'
+    - cron: '*/10 7-20 * * 1-5'
   workflow_dispatch:
     inputs:
       slack_channel:
@@ -60,7 +60,7 @@ jobs:
       - uses: fgerthoffert/actions-issues-notifications@v1.0.2
         id: issues-notifications
         with:
-          github_token: ${{ secrets.GITHUB_NOTIFICATIONS_FGERTHOFFERT }}
+          github_token: ${{ secrets.GH_NOTIFICATIONS_FGERTHOFFERT }}
           max_notifications: '1'
           notification_action: 'done'
 
@@ -68,7 +68,7 @@ jobs:
         uses: slackapi/slack-github-action@v2.1.1
         with:
           method: chat.postMessage
-          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          token: ${{ secrets.SLACK_GITHUB_NOTIFICATIONS }}
           payload: |
             {
               "channel": "${{ inputs.slack_channel || 'ULE1PJ3S5' }}",
