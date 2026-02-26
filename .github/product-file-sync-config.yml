@@ -28,6 +28,8 @@ patterns:
       - .github/workflows/delivery-pr-chores.yml
       - .github/workflows/docs-academy-update.yml
       - .github/workflows/docs-academy-publish.yml
+      - .github/workflows/chachalog-comment-pr.yml
+      - .github/workflows/chachalog-prepare-changelog.yml
     delete_files:
       - .github/ISSUE_TEMPLATE/cloud-change-request.yml
     repositories:
