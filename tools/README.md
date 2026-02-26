@@ -23,6 +23,8 @@ Although we do strongly recommend the use of Scheduled Reminders in GitHub, this
 
 To cover for that missing feature, you can setup a workflow that will act like Scheduled reminder.
 
+**Note**: This action only forwards notifications present in https://github.com/notifications. If you have too many notifications (or not enough), begin by checking your notifications settings. 
+
 Begin by:
  - Creating a GitHub Personal Access Token (using **classic** tokens), only give this token the **notifications** scope
  - Contact your Delivery Manager, who will be adding the token to https://github.com/Jahia/delivery under the variable GH_NOTIFICATIONS_[USERNAME]
