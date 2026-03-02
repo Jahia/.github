@@ -30,6 +30,7 @@ patterns:
       - .github/workflows/docs-academy-publish.yml
       - .github/workflows/chachalog-comment-pr.yml
       - .github/workflows/chachalog-prepare-changelog.yml
+      - .github/instructions/changelog.instructions.md
     delete_files:
       - .github/ISSUE_TEMPLATE/cloud-change-request.yml
     repositories:
