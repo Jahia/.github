@@ -28,7 +28,7 @@ They are written so that someone familiar with the product (but not the internal
 - Put the most important information at the start of the sentence.
 
 ### Prefer outcomes over implementation
-- Focus on what the user experiences, not how we built/fixed it.
+- Focus on the user experiences, not how we built/fixed it.
 
 ## Format
 - Write changelog entries as plain sentences.
