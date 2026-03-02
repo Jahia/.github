@@ -82,7 +82,7 @@ Avoid terms like:
 
 Avoid engineering-only descriptions like:
 - “refactor”, “cleanup”, “restructured” (unless user behavior changed)
-- internal names (classes, methods, services, module names)
+- internal names (classes, methods, services, module names, exceptions)
 - “performance improvements” without stating what the user will notice
 
 ### Avoid engineering nouns when a user-facing term exists
