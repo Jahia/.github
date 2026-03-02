@@ -1,5 +1,5 @@
 ---
-description: Instructions for reviewing changelog notes as they are being added to Pull Requests. Based upon the style guide available here: https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065630/Changelog+Notes+style+guide
+description: Instructions for reviewing changelog notes as they are being added to Pull Requests. Based upon the style guide available here https://jahia-confluence.atlassian.net/wiki/spaces/PR/pages/2065630/Changelog+Notes+style+guide
 applyTo: '.chachalog/**'
 ---
 
