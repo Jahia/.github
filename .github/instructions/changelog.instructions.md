@@ -9,7 +9,7 @@ Changelog Notes are short, customer-facing descriptions of changes included in a
 
 Changelog are written in the .chachalog/ folder at the root of the repository. Changelog are not mandatory and the review should only be performed if a file was modified in this folder.
 
-They are written so that someone familiar with the product (but not the internals) can understand:
+They are written so that someone familiar with the product (but not with its internal implementation details) can understand:
 - what changed or was fixed
 - whether they are affected
 - what they may need to do (especially for breaking changes)
