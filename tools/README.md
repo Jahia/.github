@@ -24,7 +24,7 @@ Ensure you enabled "Developer mode" under Google Chrome --> Extensions - Manage 
 Although we do strongly recommend the use of Scheduled Reminders in GitHub, this only works for Pull Requests. Meaning notifications about `@mention` in GitHub Issues will not trigger notifications in Slack.
 
 Two options are available to cover for that missing feature and avoid missing notifications:
- - Use slack emails in GitHub (preferred, more resource friendly)
+ - Use slack emails in GitHub (**preferred**, more resource friendly)
  - Use a dedicated push to Slack workflow.
 
 ## Option A: Slack emails in GitHub
