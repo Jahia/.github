@@ -7,7 +7,7 @@ type: Release
 ---
 
 Most of the times, one of the outcomes of a vulnerability fix is a security page on the Academy.
-This checklist is here to ensure all stakeholders have reviewed it before its publication.
+This checklist is here to ensure all the stakeholders have reviewed it before its publication.
 
 <h2 id="tests-checklist">Checklist</h2>
 
@@ -15,5 +15,6 @@ This checklist is here to ensure all stakeholders have reviewed it before its pu
 - [ ] The security page content has been validated by the Product team
 - [ ] The security page has been reviewed by the Support team
 - [ ] The security page has been reviewed by the Cloud team
+- [ ] If available, the suggested mitigation has been implemented by the Cloud team
 - [ ] The security page has been reviewed by the Service team
 - [ ] The security page has been published
