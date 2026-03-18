@@ -205,7 +205,7 @@ patterns:
       - Jahia/site-settings-publication@master
       - Jahia/site-settings-seo@master
       - Jahia/siteimprove-connector@master
-      - Jahia/sitemap@master
+      - Jahia/sitemap@main
       - Jahia/siteSettings@master
       - Jahia/skins@master
       - Jahia/spnego-authentication-valve@master
