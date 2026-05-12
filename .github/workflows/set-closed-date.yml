@@ -1,0 +1,12 @@
+name: Set Closed Date
+
+on:
+  issues:
+    types: [closed, reopened]
+
+jobs:
+  set_closed_date:
+    uses: Jahia/jahia-modules-action/.github/workflows/reusable-set-closed-date.yml@v2
+    secrets: inherit 
+    with:
+      primary_release_branch: "master"
