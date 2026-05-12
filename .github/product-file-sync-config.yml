@@ -30,9 +30,8 @@ patterns:
       - .github/workflows/docs-academy-publish.yml
       - .github/workflows/chachalog-comment-pr.yml
       - .github/workflows/chachalog-prepare-changelog.yml
+      - .github/workflows/set-closed-date.yml
       - .github/instructions/changelog.instructions.md
-    delete_files:
-      - .github/ISSUE_TEMPLATE/cloud-change-request.yml
     repositories:
       # An updated version of this list can be obtained by running this 
       # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml
