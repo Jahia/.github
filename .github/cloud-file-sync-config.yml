@@ -28,25 +28,38 @@ patterns:
       - .github/workflows/delivery-pr-chores.yml
     repositories:
       # An updated version of this list can be obtained by running this 
-      # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml
+      # workflow: https://github.com/Jahia/.github/actions/workflows/cloud-list-product-repos.yml
       # IMPORTANT: The following repositories should not be synced
       # from the list based on topics, make sure to remove them:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
       # - Jahia/pm => The repo used by PM for their internal issues
-      # Though not supported, the following repos should also be present in the list:
-      # - Jahia/formidable => The repo used by PM for their internal issues
       - Jahia/cloud-issues@main
-      - Jahia/jelastic-packages@main
-      - Jahia/paas-ansible@main
       - Jahia/paas-monitoring@main
-      - Jahia/cloud-ops-dashboard@main
-      - Jahia/cloud-core-vault@main
       - Jahia/cloud-core-ansible@main
+      - Jahia/cloud-core-ara@main
       - Jahia/cloud-core-infrastructure@main
+      - Jahia/cloud-core-monitoring@main
+      - Jahia/cloud-core-routing@main
+      - Jahia/cloud-core-terraform-registry@main
+      - Jahia/cloud-core-vault@main
+      - Jahia/cloud-ec-infra@main
+      - Jahia/cloud-fallback-vpn@main
+      - Jahia/cloud-issues@main
+      - Jahia/cloud-nginx4github@main
+      - Jahia/cloud-ops-dashboard@main
+      - Jahia/cloud-ops-dashboard-k8s@main
+      - Jahia/cloud-papi@main
+      - Jahia/cloud-utils@main
+      - Jahia/docker-autobackup@main
+      - Jahia/docker-jahia-cloud@main
+      - Jahia/docker-papi@main
       - Jahia/jahiastic-jahia@main
       - Jahia/jahiastic-jcustomer@main
-      - Jahia/cloud-utils@main
-      - Jahia/cloud-ec-infra@main
-
-
+      - Jahia/jelastic-packages@main
+      - Jahia/paas-ansible@main
+      - Jahia/paas-build-rpms@main
+      - Jahia/papi-k8s@main
+      - Jahia/papi-terraform-provider@main
+      - Jahia/pylastic@main
+      - Jahia/tang-k8s@main
