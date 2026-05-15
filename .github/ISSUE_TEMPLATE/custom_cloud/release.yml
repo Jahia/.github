@@ -1,0 +1,63 @@
+---
+name: Release
+description: Create a Jahia Cloud release
+title: 'Release Jahia Cloud v'
+type: Release
+projects: ["Jahia/50"]
+body:
+  - type: markdown
+    attributes:
+      value: "Documentation: https://jahia-confluence.atlassian.net/wiki/x/DQYM"
+  - type: textarea
+    attributes:
+      label: Milestones
+      placeholder: List of milestones concerned by the release
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Scheduling & Communication
+      value: |
+        - [ ] Write the internal [release note](https://jahia-confluence.atlassian.net/wiki/x/SwQM) on Confluence
+        - [ ] Write the public release note on the Academy
+        - [ ] Open a [CLOUD](https://support.jahia.com/projects/CLOUD) ticket to ask the Support team to schedule the operation for customers
+        - [ ] Check if the Cloud Operations calendar have been updated by the Delivery Manager
+        - [ ] Communicate about the update of internal environments on the [#cloud-info](https://jahia.slack.com/archives/CG4KXQ3K4) channel
+        - [ ] Schedule a maintenance in the [Jahia statuspage](https://manage.statuspage.io)
+        - [ ] Schedule the maintenance page for [Jahia Cloud](https://jahia.cloud/home/jahia-cloud-maintenance.html)
+  - type: textarea
+    attributes:
+      label: Preparation & Validation
+      value: |
+        - [ ] Create the GitHub release for each component
+        - [ ] Update the `latest` tag on the jahiastic repositories
+        - [ ] Build the Jahia Cloud modules
+        - [ ] Apply the migration package to `development-jahiacloud`
+        - [ ] Deploy to preproduction
+        - [ ] Launch Selenium tests in preproduction
+        - [ ] Finalize the Jahia Cloud modules release
+  - type: textarea
+    attributes:
+      label: Release process
+      value: |
+        - — ENABLE MAINTENANCE —
+        - [Push preprod `jahiastic-jahia` images to prod](https://github.com/Jahia/jahiastic-jahia/actions/workflows/prod-push.yml)
+        - [Push preprod `jahiastic-jcustomer` images to prod](https://github.com/Jahia/jahiastic-jcustomer/actions/workflows/prod-push.yml)
+        - Deploy modules vX.Y.Z (*dx-jelastic-manager*, *dx-jelastic-template* and *healthcheck-jahiacloud*)
+        - Update the autobackup configuration: set `BACKUP_BRANCH` envvar to vX.Y.Z
+        - Update Jahia Cloud features availability: _TO BE ASSESSED_
+        - — DISABLE MAINTENANCE —
+        - Migrate Jahia environments to vX: _IMPACTS_
+        - Migrate jCustomer environments to vX: _IMPACTS_
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional steps
+  - type: textarea
+    attributes:
+      label: Post Operations
+      value: |
+        - [ ] Check the Ops Dashboard
+        - [ ] Communicate about the end of the release on the [#cloud-info](https://jahia.slack.com/archives/CG4KXQ3K4) channel
+        - [ ] Communicate about the end of the release on all clients tickets

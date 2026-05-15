@@ -1,0 +1,52 @@
+# Configuration file used by the cloud-file-sync.yml workflow
+settings:
+  pull_request:
+    title: 'chore: sync files with `<%- repository %>` [skip ci]'
+    labels:
+      - chore
+    merge: 
+      mode: admin
+      strategy: squash
+      delete_branch: true      
+  commit: 
+    format: '<%- prefix %>: <%- subject %>'
+    prefix: 'chore'
+    subject: 'sync files with `<%- repository %>` [skip ci]'
+patterns:
+  # Important, committing to the .github/workflows folder 
+  # require the user to have "workflow" scope on the token
+  # https://github.com/octokit/rest.js/issues/368
+  - files:
+      - .github/release.yml
+      - from: .github/ISSUE_TEMPLATE
+        to: .github/ISSUE_TEMPLATE
+        exclude:
+          - '**/custom_*/*'        
+      - from: .github/ISSUE_TEMPLATE/custom_cloud        
+        to: .github/ISSUE_TEMPLATE
+      - .github/workflows/delivery-issue-chores.yml
+      - .github/workflows/delivery-pr-chores.yml
+    repositories:
+      # An updated version of this list can be obtained by running this 
+      # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml
+      # IMPORTANT: The following repositories should not be synced
+      # from the list based on topics, make sure to remove them:
+      # - Jahia/.github => This is the current repository
+      # - Jahia/jahia => This is a clone of jahia-private
+      # - Jahia/pm => The repo used by PM for their internal issues
+      # Though not supported, the following repos should also be present in the list:
+      # - Jahia/formidable => The repo used by PM for their internal issues
+      - Jahia/cloud-issues@main
+      - Jahia/jelastic-packages@main
+      - Jahia/paas-ansible@main
+      - Jahia/paas-monitoring@main
+      - Jahia/cloud-ops-dashboard@main
+      - Jahia/cloud-core-vault@main
+      - Jahia/cloud-core-ansible@main
+      - Jahia/cloud-core-infrastructure@main
+      - Jahia/jahiastic-jahia@main
+      - Jahia/jahiastic-jcustomer@main
+      - Jahia/cloud-utils@main
+      - Jahia/cloud-ec-infra@main
+
+
