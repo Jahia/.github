@@ -34,7 +34,6 @@ patterns:
       # - Jahia/.github => This is the current repository
       # - Jahia/jahia => This is a clone of jahia-private
       # - Jahia/pm => The repo used by PM for their internal issues
-      - Jahia/cloud-issues@main
       - Jahia/paas-monitoring@main
       - Jahia/cloud-core-ansible@main
       - Jahia/cloud-core-ara@main
