@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         GitHub Issue Jira Links
 // @namespace    http://tampermonkey.net/
-// @version      1.6
-// @description  Add a section below the GitHub issue description with Jira tickets listed from the "Support tickets" field.
+// @version      2.0
+// @description  Add a section below the GitHub issue description with Jira tickets listed from the "Jira tickets" field across all projects.
 // @author       Fgerthoffert
 // @match        https://github.com/*/*/issues/*
 // @match        https://github.com/*/*/projects/*
@@ -13,21 +13,23 @@
     'use strict';
 
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/'; // Update with your Jira instance URL.
-    const cfgProjectName = 'Engineering - Delivery'
     const cfgTicketsFieldName = 'Jira tickets'
     const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex/'; // Update with the host containing the issue events
 
-    function findProject(projectName) {
+    function findAllProjects() {
         const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
-        const projectEntries = Array.from(projectsSidebar.querySelector('div:nth-child(2) > div').children);
-        let foundProject;
-        for (const project of projectEntries) {
-          if (project.textContent.includes(projectName)) {
-            console.log("Project: " + projectName + " found")
-            foundProject = project
-          }
+        if (!projectsSidebar) {
+            console.log("No projects sidebar found");
+            return [];
         }
-        return foundProject
+        const container = projectsSidebar.querySelector('div:nth-child(2) > div');
+        if (!container) {
+            console.log("No project entries container found");
+            return [];
+        }
+        const projectEntries = Array.from(container.children);
+        console.log("Found " + projectEntries.length + " project(s) in sidebar");
+        return projectEntries;
     }
 
     function expandProject(project) {
@@ -35,43 +37,45 @@
             // Not clicking if the field is already visible
             if (!project.textContent.includes(cfgTicketsFieldName)) {
                 const expandButton = project.querySelector('[data-component="IconButton"]');
-                console.log(expandButton)
                 if (expandButton) {
-                    console.log("Clicking on expand button")
+                    console.log("Clicking on expand button for project");
                     expandButton.click();
                 }
             }
         }
     }
 
+    function getTicketsFieldContent(project, ticketsFieldName) {
+        let ticketsField;
+        let fieldContent;
+        const ul = project.querySelector('div > ul');
+        if (!ul) return undefined;
+        const projectFieldsEntries = Array.from(ul.children);
+        for (const projectField of projectFieldsEntries) {
+            if (projectField.textContent.includes(ticketsFieldName)) {
+                console.log("Field: " + ticketsFieldName + " found in project")
+                ticketsField = projectField
+            }
+        }
 
-   function getTicketsFieldContent(project, ticketsFieldName) {
-       let ticketsField;
-       let fieldContent;
-       const projectFieldsEntries = Array.from(project.querySelector('div > ul').children);
-       for (const projectField of projectFieldsEntries) {
-           if (projectField.textContent.includes(ticketsFieldName)) {
-               console.log("Field: " + ticketsFieldName + " found in project")
-               ticketsField = projectField
-           }
-       }
-
-       if (ticketsField !== undefined) {
-           fieldContent = ticketsField.querySelectorAll('li > span > button > span')[1].textContent
-       }
-       return fieldContent
-   }
+        if (ticketsField !== undefined) {
+            const spans = ticketsField.querySelectorAll('li > span > button > span');
+            if (spans && spans.length > 1) {
+                fieldContent = spans[1].textContent;
+            }
+        }
+        return fieldContent;
+    }
 
     function getTicketIds(ticketsFieldContent) {
-        if (ticketsFieldContent.includes("Enter text")) {
-            return "";
-        } else {
-            return ticketsFieldContent
-                .trim()
-                .split(',')
-                .map(ticket => ticket.trim())
-                .filter(ticket => ticket.length > 0);
+        if (!ticketsFieldContent || ticketsFieldContent.includes("Enter text")) {
+            return [];
         }
+        return ticketsFieldContent
+            .trim()
+            .split(',')
+            .map(ticket => ticket.trim())
+            .filter(ticket => ticket.length > 0 && /^[A-Z]+-\d+$/.test(ticket));
     }
 
     function createJiraSection(ticketIDs, jiraBaseURL) {
@@ -161,20 +165,27 @@
             addLinkToIssueEvent(issue, cfgIssueEventsBaseURL);
         }
 
-        // Expand project details first, then extract and display tickets.
-        const project = findProject(cfgProjectName)
-        console.log(project)
-        expandProject(project)
+        // Find and expand all projects, then extract tickets from all of them.
+        const projects = findAllProjects();
+        for (const project of projects) {
+            expandProject(project);
+        }
 
         setTimeout(() => {
-            const ticketsFieldContent = getTicketsFieldContent(project, cfgTicketsFieldName)
-            const ticketIds = getTicketIds(ticketsFieldContent)
-            if (ticketIds && ticketIds.length > 0) {
-                createJiraSection(ticketIds, cfgJiraBaseURL);
+            const allTicketIds = [];
+            for (const project of projects) {
+                const ticketsFieldContent = getTicketsFieldContent(project, cfgTicketsFieldName);
+                const ticketIds = getTicketIds(ticketsFieldContent);
+                if (ticketIds.length > 0) {
+                    allTicketIds.push(...ticketIds);
+                }
+            }
+            // Deduplicate tickets (same ticket may appear in multiple projects)
+            const uniqueTicketIds = [...new Set(allTicketIds)];
+            if (uniqueTicketIds.length > 0) {
+                createJiraSection(uniqueTicketIds, cfgJiraBaseURL);
             }
         }, 1000); // Delay to ensure the expanded content is loaded.
-
-
     }
 
     // Run the script after the page loads completely.
