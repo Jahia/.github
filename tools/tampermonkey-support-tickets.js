@@ -24,10 +24,6 @@
         return url.includes('/projects/') && url.includes('pane=issue');
     }
 
-    function isIssueView() {
-        return window.location.href.includes('/issues/');
-    }
-
     // --- DOM helpers ---
 
     function removeExistingJiraSection() {
@@ -43,7 +39,12 @@
             console.log("[Jira Links] No projects sidebar found");
             return [];
         }
-        const container = projectsSidebar.querySelector('div:nth-child(2) > div');
+        // Try the standard issue view container first
+        let container = projectsSidebar.querySelector('div:nth-child(2) > div');
+        if (!container) {
+            // Fallback: look for any child div that contains project entries
+            container = projectsSidebar.querySelector('div > div');
+        }
         if (!container) {
             console.log("[Jira Links] No project entries container found");
             return [];
@@ -70,78 +71,25 @@
         const fields = Array.from(ul.children);
         for (const field of fields) {
             if (field.textContent.includes(cfgTicketsFieldName)) {
+                // Primary selector: li > span > button > span (issue view structure)
                 const spans = field.querySelectorAll('li > span > button > span');
                 if (spans && spans.length > 1) {
                     return spans[1].textContent;
                 }
+                // Fallback: look for any span containing a ticket-like pattern
+                const allSpans = field.querySelectorAll('span');
+                for (const span of allSpans) {
+                    const text = span.textContent.trim();
+                    if (text && text !== cfgTicketsFieldName && /[A-Z]+-\d+/.test(text)) {
+                        return text;
+                    }
+                }
             }
         }
         return undefined;
     }
 
-    // --- Project pane view: find tickets in the issue pane sidebar ---
 
-    function getTicketsFromProjectPane() {
-        // In project pane view, project fields are displayed in the issue detail sidebar.
-        // Look for the "Jira tickets" field label and its adjacent value.
-        const allText = document.querySelectorAll('span, div, label');
-        for (const el of allText) {
-            if (el.textContent.trim() === cfgTicketsFieldName && el.closest('[class*="sidebar"], [class*="Sidebar"], [data-testid*="sidebar"], [role="complementary"]')) {
-                // Found the label, look for the value in the parent container
-                const container = el.closest('div[class]') || el.parentElement;
-                if (container) {
-                    const buttons = container.querySelectorAll('button > span');
-                    for (const btn of buttons) {
-                        const text = btn.textContent.trim();
-                        if (text && text !== cfgTicketsFieldName && !text.includes("Enter text")) {
-                            return text;
-                        }
-                    }
-                }
-            }
-        }
-
-        // Fallback: search for the field in any visible project field list in the pane
-        const fieldGroups = document.querySelectorAll('[data-testid="issue-sidebar"] ul, [role="complementary"] ul');
-        for (const ul of fieldGroups) {
-            const items = Array.from(ul.children);
-            for (const item of items) {
-                if (item.textContent.includes(cfgTicketsFieldName)) {
-                    const spans = item.querySelectorAll('li > span > button > span, span > button > span');
-                    if (spans && spans.length > 1) {
-                        return spans[1].textContent;
-                    }
-                    // Try broader search within the item
-                    const allSpans = item.querySelectorAll('span');
-                    for (const span of allSpans) {
-                        const text = span.textContent.trim();
-                        if (text && text !== cfgTicketsFieldName && !text.includes("Enter text") && /[A-Z]+-\d+/.test(text)) {
-                            return text;
-                        }
-                    }
-                }
-            }
-        }
-
-        // Last resort: scan the entire pane for a text pattern matching tickets near the field name
-        const pane = document.querySelector('[data-testid="side-panel"], [class*="pane"], [class*="Panel"]');
-        if (pane) {
-            const items = pane.querySelectorAll('li, div');
-            for (const item of items) {
-                if (item.textContent.includes(cfgTicketsFieldName)) {
-                    const spans = item.querySelectorAll('span');
-                    for (const span of spans) {
-                        const text = span.textContent.trim();
-                        if (text && text !== cfgTicketsFieldName && /^[A-Z]+-\d+/.test(text)) {
-                            return text;
-                        }
-                    }
-                }
-            }
-        }
-
-        return undefined;
-    }
 
     // --- Ticket parsing ---
 
@@ -187,17 +135,13 @@
         const issueMetadata = document.querySelector('[data-testid="issue-metadata-fixed"] > div');
         if (issueMetadata) return issueMetadata;
 
-        // Project pane view: try the issue body/header area within the pane
-        const paneBody = document.querySelector('[data-testid="side-panel-body"]');
-        if (paneBody) return paneBody;
+        // Project pane view: look for the sidebar projects section itself and insert after it
+        const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
+        if (projectsSidebar) return projectsSidebar.parentElement;
 
-        // Fallback: look for the issue body in the pane
+        // Fallback: issue body
         const issueBody = document.querySelector('[data-testid="issue-body"]');
         if (issueBody) return issueBody.parentElement;
-
-        // Another fallback for project pane: the pane's first scrollable div
-        const pane = document.querySelector('[class*="pane"] [class*="content"], [role="complementary"]');
-        if (pane) return pane;
 
         return null;
     }
@@ -251,7 +195,7 @@
 
     // --- Main logic ---
 
-    function collectTicketsFromIssueView() {
+    function collectTicketsFromSidebar() {
         const projects = findAllProjectsInSidebar();
         for (const project of projects) {
             expandProject(project);
@@ -272,26 +216,6 @@
         }, 1000);
     }
 
-    function collectTicketsFromProjectPane() {
-        // In project pane, fields may already be visible without expanding
-        const content = getTicketsFromProjectPane();
-        const ids = getTicketIds(content);
-        if (ids.length > 0) {
-            const container = findTargetContainer();
-            createJiraSection(ids, cfgJiraBaseURL, container);
-        } else {
-            // Retry: the pane content may still be loading
-            setTimeout(() => {
-                const retryContent = getTicketsFromProjectPane();
-                const retryIds = getTicketIds(retryContent);
-                if (retryIds.length > 0) {
-                    const container = findTargetContainer();
-                    createJiraSection(retryIds, cfgJiraBaseURL, container);
-                }
-            }, 1500);
-        }
-    }
-
     function init() {
         console.log("[Jira Links] Initializing for URL:", window.location.href);
         removeExistingJiraSection();
@@ -304,11 +228,8 @@
             addLinkToIssueEvent(issue, cfgIssueEventsBaseURL);
         }
 
-        if (isIssueView()) {
-            collectTicketsFromIssueView();
-        } else if (isProjectPaneView()) {
-            collectTicketsFromProjectPane();
-        }
+        // Use the same sidebar-based approach for both issue view and project pane view
+        collectTicketsFromSidebar();
     }
 
     // --- SPA navigation handling ---
