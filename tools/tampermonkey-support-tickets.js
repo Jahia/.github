@@ -13,7 +13,7 @@
     'use strict';
 
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/'; // Update with your Jira instance URL.
-    const cfgProjectName = 'Product Team'
+    const cfgProjectName = 'Engineering - Delivery'
     const cfgTicketsFieldName = 'Jira tickets'
     const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex/'; // Update with the host containing the issue events
 
