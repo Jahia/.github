@@ -43,185 +43,185 @@ patterns:
       # - Jahia/pm => The repo used by PM for their internal issues
       # Though not supported, the following repos should also be present in the list:
       # - Jahia/formidable => The repo used by PM for their internal issues
-      - Jahia/advanced-visibility@master
-      - Jahia/app-shell@master
+      - Jahia/advanced-visibility@main
+      - Jahia/app-shell@main
       - Jahia/asset-webpack-example@main
-      - Jahia/assets@master
-      - Jahia/atmosphere@master
-      - Jahia/augmented-search@master
-      - Jahia/augmented-search-custom-configuration@master
-      - Jahia/augmented-search-package@master
-      - Jahia/augmented-search-ui@master
-      - Jahia/automated-tagging@master
-      - Jahia/cas-authentication-valve@master
+      - Jahia/assets@main
+      - Jahia/atmosphere@main
+      - Jahia/augmented-search@main
+      - Jahia/augmented-search-custom-configuration@main
+      - Jahia/augmented-search-package@main
+      - Jahia/augmented-search-ui@main
+      - Jahia/automated-tagging@main
+      - Jahia/cas-authentication-valve@main
       - Jahia/cimg-mvn-cache@main
-      - Jahia/ckeditor@master
-      - Jahia/ckeditor-dev@master
-      - Jahia/cla-assistant@master
+      - Jahia/ckeditor@main
+      - Jahia/ckeditor-dev@main
+      - Jahia/cla-assistant@main
       - Jahia/client-cache-control@main
       - Jahia/cloudimage@main
       - Jahia/clustering@main
-      - Jahia/cmis-provider@master
-      - Jahia/content-editor@master
-      - Jahia/content-security-policy@master
-      - Jahia/contentRetrieval@master
+      - Jahia/cmis-provider@main
+      - Jahia/content-editor@main
+      - Jahia/content-security-policy@main
+      - Jahia/contentRetrieval@main
       - Jahia/copy-to-other-languages@main
-      - Jahia/core-perf-test@master
-      - Jahia/core-perf-test-JMeter-WebSocketSampler@master
+      - Jahia/core-perf-test@main
+      - Jahia/core-perf-test-JMeter-WebSocketSampler@main
       - Jahia/core-perf-test-terraform@main
-      - Jahia/database-connector@master
-      - Jahia/default@master
+      - Jahia/database-connector@main
+      - Jahia/default@main
       - Jahia/deleted-issues@main
       - Jahia/delivery@main
       - Jahia/dependency-track-exporter@main
-      - Jahia/df-tests-api@master
-      - Jahia/directive-filter@master
-      - Jahia/distributed-sessions@master
+      - Jahia/df-tests-api@main
+      - Jahia/directive-filter@main
+      - Jahia/distributed-sessions@main
       - Jahia/docker-elasticsearch@main
-      - Jahia/docker-openldap@master
-      - Jahia/drools@master
-      - Jahia/dx-tests-specs@master
-      - Jahia/ehcache@master
-      - Jahia/el-spec@master
-      - Jahia/elasticsearch-connector@master
+      - Jahia/docker-openldap@main
+      - Jahia/drools@main
+      - Jahia/dx-tests-specs@main
+      - Jahia/ehcache@main
+      - Jahia/el-spec@main
+      - Jahia/elasticsearch-connector@main
       - Jahia/estool@main
-      - Jahia/external-provider@master
-      - Jahia/external-provider-users-groups@master
-      - Jahia/facets@master
-      - Jahia/felix-dev@master
+      - Jahia/external-provider@main
+      - Jahia/external-provider-users-groups@main
+      - Jahia/facets@main
+      - Jahia/felix-dev@main
       - Jahia/formidable@main
-      - Jahia/forms-core@master
-      - Jahia/forms-core-tests@master
-      - Jahia/forms-elasticsearch-storage-tests@master
-      - Jahia/forms-extended-inputs@master
-      - Jahia/forms-nocss-theme@master
-      - Jahia/forms-package@master
-      - Jahia/forms-prefill@master
-      - Jahia/forms-snippets-extension@master
-      - Jahia/function-score-examples@master
-      - Jahia/gemini.blueprint@master
+      - Jahia/forms-core@main
+      - Jahia/forms-core-tests@main
+      - Jahia/forms-elasticsearch-storage-tests@main
+      - Jahia/forms-extended-inputs@main
+      - Jahia/forms-nocss-theme@main
+      - Jahia/forms-package@main
+      - Jahia/forms-prefill@main
+      - Jahia/forms-snippets-extension@main
+      - Jahia/function-score-examples@main
+      - Jahia/gemini.blueprint@main
       - Jahia/github-actions-runners@v5.17.0
-      - Jahia/graphql-core@master
+      - Jahia/graphql-core@main
       - Jahia/graphql-java@v13.x-jahia
-      - Jahia/graphql-java-servlet@master
+      - Jahia/graphql-java-servlet@main
       - Jahia/guest-multipart-filter@main
       - Jahia/html-filtering@main
       - Jahia/izpack@4.3
       - Jahia/jackrabbit@trunk
-      - Jahia/jahia-administration@master
-      - Jahia/jahia-authentication@master
+      - Jahia/jahia-administration@main
+      - Jahia/jahia-authentication@main
       - Jahia/jahia-base-ui@main
       - Jahia/jahia-cloud-modules@main
-      - Jahia/jahia-commons@master
-      - Jahia/jahia-configuration@master
-      - Jahia/jahia-csrf-guard@master
+      - Jahia/jahia-commons@main
+      - Jahia/jahia-configuration@main
+      - Jahia/jahia-csrf-guard@main
       - Jahia/jahia-cypress@main
-      - Jahia/jahia-dashboard@master
-      - Jahia/jahia-dashboard-docs@master
-      - Jahia/jahia-dev-private@master
-      - Jahia/jahia-developer-tools@master
+      - Jahia/jahia-dashboard@main
+      - Jahia/jahia-dashboard-docs@main
+      - Jahia/jahia-dev-private@main
+      - Jahia/jahia-developer-tools@main
       - Jahia/jahia-docker-mvn-cache@main
-      - Jahia/jahia-ee@master
-      - Jahia/Jahia-MF-Integ-Test-Site@master
+      - Jahia/jahia-ee@main
+      - Jahia/Jahia-MF-Integ-Test-Site@main
       - Jahia/jahia-modules-action@main
-      - Jahia/jahia-oauth@master
-      - Jahia/jahia-pack-private@master
-      - Jahia/jahia-page-composer@master
-      - Jahia/jahia-private@master
-      - Jahia/jahia-qa@master
+      - Jahia/jahia-oauth@main
+      - Jahia/jahia-pack-private@main
+      - Jahia/jahia-page-composer@main
+      - Jahia/jahia-private@main
+      - Jahia/jahia-qa@main
       - Jahia/jahia-qa-data@main
       - Jahia/jahia-reporter@main
-      - Jahia/jahia-repository-explorer@master
-      - Jahia/jahia-ui-root@master
-      - Jahia/jahia-user-entries@master
+      - Jahia/jahia-repository-explorer@main
+      - Jahia/jahia-ui-root@main
+      - Jahia/jahia-user-entries@main
       - Jahia/jahia-user-feedbacks@main
-      - Jahia/JahiaReleaseTool@master
-      - Jahia/java-ts-bind@master
-      - Jahia/javascript-components@master
+      - Jahia/JahiaReleaseTool@main
+      - Jahia/java-ts-bind@main
+      - Jahia/javascript-components@main
       - Jahia/javascript-modules@main
-      - Jahia/jcontent@master
-      - Jahia/jcr-auth-provider@master
-      - Jahia/jcrestapi@master
-      - Jahia/jcustomer@master
-      - Jahia/jcustomer-custom-event-checker@master
+      - Jahia/jcontent@main
+      - Jahia/jcr-auth-provider@main
+      - Jahia/jcrestapi@main
+      - Jahia/jcustomer@main
+      - Jahia/jcustomer-custom-event-checker@main
       - Jahia/jcustomer-perf@main
-      - Jahia/jexperience@master
-      - Jahia/jexperience-auth-data-mapper@master
-      - Jahia/jexperience-condition-example@master
+      - Jahia/jexperience@main
+      - Jahia/jexperience-auth-data-mapper@main
+      - Jahia/jexperience-condition-example@main
       - Jahia/jexperience-dashboards@main
-      - Jahia/jexperience-forms-bridge@master
+      - Jahia/jexperience-forms-bridge@main
       - Jahia/jira-archives@main
-      - Jahia/jquery@master
+      - Jahia/jquery@main
       - Jahia/json-overrides@main
       - Jahia/karaf-cellar@cellar-4.1.3-jahia-fixes
       - Jahia/keepicker@main
-      - Jahia/keymaker@master
-      - Jahia/kibana-dashboards-provider@master
-      - Jahia/LDAP-provider@master
+      - Jahia/keymaker@main
+      - Jahia/kibana-dashboards-provider@main
+      - Jahia/LDAP-provider@main
       - Jahia/legacy-default-components@main
-      - Jahia/license-tools@master
-      - Jahia/linkchecker@master
-      - Jahia/lucene-solr@master
+      - Jahia/license-tools@main
+      - Jahia/linkchecker@main
+      - Jahia/lucene-solr@main
       - Jahia/luxe-jahia-demo@main
-      - Jahia/macros@master
-      - Jahia/maven-archetypes@master
-      - Jahia/maven-release@master
-      - Jahia/module-manager@master
+      - Jahia/macros@main
+      - Jahia/maven-archetypes@main
+      - Jahia/maven-release@main
+      - Jahia/module-manager@main
       - Jahia/moonstone@main
-      - Jahia/mvel@master
-      - Jahia/news-qamf@master
+      - Jahia/mvel@main
+      - Jahia/news-qamf@main
       - Jahia/npm-jsx-templates-web-blue@main
-      - Jahia/npm-solid-react-templateset-example@master
-      - Jahia/open-source@master
+      - Jahia/npm-solid-react-templateset-example@main
+      - Jahia/open-source@main
       - Jahia/opencode@main
       - Jahia/org.ops4j.pax.web@main
-      - Jahia/OSGi-modules-samples@master
+      - Jahia/OSGi-modules-samples@main
       - Jahia/personal-api-tokens@main
       - Jahia/preview-cloud@main
-      - Jahia/preview-env@master
-      - Jahia/profile@master
+      - Jahia/preview-env@main
+      - Jahia/profile@main
       - Jahia/provisioning-tutorials@main
-      - Jahia/qa-mf-common-utils@master
-      - Jahia/qa-mf-referrer-site@master
-      - Jahia/qa-mf-selenium@master
-      - Jahia/qa-mf-unomi-api@master
-      - Jahia/qa-mf-unomi-tracker-site@master
-      - Jahia/QA-Modules@master
-      - Jahia/remotepublish@master
+      - Jahia/qa-mf-common-utils@main
+      - Jahia/qa-mf-referrer-site@main
+      - Jahia/qa-mf-selenium@main
+      - Jahia/qa-mf-unomi-api@main
+      - Jahia/qa-mf-unomi-tracker-site@main
+      - Jahia/QA-Modules@main
+      - Jahia/remotepublish@main
       - Jahia/richtext-ckeditor5@main
-      - Jahia/robots@master
-      - Jahia/rolesmanager@master
-      - Jahia/saml-authentication-valve@master
+      - Jahia/robots@main
+      - Jahia/rolesmanager@main
+      - Jahia/saml-authentication-valve@main
       - Jahia/sandbox@main
-      - Jahia/sdk-jahia@master
-      - Jahia/search@master
-      - Jahia/search-ui-jahia-connector@master
-      - Jahia/security-filter-tools@master
-      - Jahia/selenium@master
-      - Jahia/seo@master
+      - Jahia/sdk-jahia@main
+      - Jahia/search@main
+      - Jahia/search-ui-jahia-connector@main
+      - Jahia/security-filter-tools@main
+      - Jahia/selenium@main
+      - Jahia/seo@main
       - Jahia/server-availability-manager@main
-      - Jahia/serverSettings@master
-      - Jahia/serverSettings-ee@master
-      - Jahia/site-settings-publication@master
-      - Jahia/site-settings-seo@master
-      - Jahia/siteimprove-connector@master
+      - Jahia/serverSettings@main
+      - Jahia/serverSettings-ee@main
+      - Jahia/site-settings-publication@main
+      - Jahia/site-settings-seo@main
+      - Jahia/siteimprove-connector@main
       - Jahia/sitemap@main
-      - Jahia/siteSettings@master
-      - Jahia/skins@master
-      - Jahia/spnego-authentication-valve@master
+      - Jahia/siteSettings@main
+      - Jahia/skins@main
+      - Jahia/spnego-authentication-valve@main
       - Jahia/spring-framework@main
-      - Jahia/tags@master
-      - Jahia/tasks@master
-      - Jahia/templates-system@master
-      - Jahia/tools@master
-      - Jahia/tools-ee@master
-      - Jahia/translation-globallink@master
+      - Jahia/tags@main
+      - Jahia/tasks@main
+      - Jahia/templates-system@main
+      - Jahia/tools@main
+      - Jahia/tools-ee@main
+      - Jahia/translation-globallink@main
       - Jahia/trivy-db@main
-      - Jahia/update-manager@master
+      - Jahia/update-manager@main
       - Jahia/urlrewritefilter@main
-      - Jahia/userDashboard@master
+      - Jahia/userDashboard@main
       - Jahia/user-password-authentication@main
-      - Jahia/visibility@master
-      - Jahia/workato-unomi-connector@master
+      - Jahia/visibility@main
+      - Jahia/workato-unomi-connector@main
       - Jahia/workflow-extender@main      
 
