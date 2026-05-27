@@ -149,11 +149,16 @@
 
     // --- Main logic ---
 
-    function collectTicketsFromField() {
+    function collectTicketsFromField(retries = 2) {
         const content = getTicketsFromIssueField();
         const ticketIds = getTicketIds(content);
         if (ticketIds.length > 0) {
             const container = findTargetContainer();
+            if (!container && retries > 0) {
+                console.log("[Jira Links] Target container not found, retrying...");
+                setTimeout(() => collectTicketsFromField(retries - 1), 1000);
+                return;
+            }
             createJiraSection(ticketIds, cfgJiraBaseURL, container);
         }
     }
@@ -178,14 +183,16 @@
     // Project views use pushState/replaceState for navigation without full page reloads.
 
     let lastUrl = window.location.href;
+    let pendingInitTimeout = null;
 
     function onUrlChange() {
         const currentUrl = window.location.href;
         if (currentUrl !== lastUrl) {
             lastUrl = currentUrl;
             console.log("[Jira Links] URL changed, re-initializing");
-            // Wait for the new pane content to render
-            setTimeout(init, 1500);
+            // Debounce to avoid duplicate init() calls from rapid mutations
+            clearTimeout(pendingInitTimeout);
+            pendingInitTimeout = setTimeout(init, 1500);
         }
     }
 
@@ -193,21 +200,25 @@
     const originalPushState = history.pushState;
     history.pushState = function () {
         originalPushState.apply(this, arguments);
-        onUrlChange();
+        try { onUrlChange(); } catch (e) { console.error("[Jira Links]", e); }
     };
 
     const originalReplaceState = history.replaceState;
     history.replaceState = function () {
         originalReplaceState.apply(this, arguments);
-        onUrlChange();
+        try { onUrlChange(); } catch (e) { console.error("[Jira Links]", e); }
     };
 
     window.addEventListener('popstate', onUrlChange);
 
-    // Run on initial page load
-    window.addEventListener('load', () => {
-        setTimeout(init, 2000);
-    });
+    // Run on initial page load (handle case where load already fired)
+    if (document.readyState === 'complete') {
+        setTimeout(init, 500);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(init, 2000);
+        });
+    }
 
     // Also observe DOM changes for dynamic pane loading (e.g., clicking an issue in project view)
     const observer = new MutationObserver(() => {
