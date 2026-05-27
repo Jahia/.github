@@ -14,12 +14,13 @@
 
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/';
     const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex/';
-    const JIRA_SECTION_ID = 'tampermonkey-jira-links';
+    const cfgJiraSectionId = 'tampermonkey-jira-links';
+    const cfgIssueFieldTitle = 'Jira tickets';
 
     // --- DOM helpers ---
 
     function removeExistingJiraSection() {
-        const existing = document.getElementById(JIRA_SECTION_ID);
+        const existing = document.getElementById(cfgJiraSectionId);
         if (existing) existing.remove();
     }
 
@@ -27,23 +28,23 @@
 
     function getTicketsFromIssueField() {
         // Look for the "Jira tickets" field button via its aria-label
-        const fieldButton = document.querySelector('button[aria-label="Edit Jira tickets"]');
+        const fieldButton = document.querySelector(`button[aria-label="Edit ${cfgIssueFieldTitle}"]`);
         if (!fieldButton) {
-            console.log("[Jira Links] No 'Jira tickets' issue field found");
+            console.log(`[Jira Links] No '${cfgIssueFieldTitle}' issue field found`);
             return undefined;
         }
         // The value is in the second span (the one with the value text class)
         const valueSpan = fieldButton.querySelector('span[class*="issueFieldValueText"]');
         if (!valueSpan) {
-            console.log("[Jira Links] 'Jira tickets' field has no value span");
+            console.log(`[Jira Links] '${cfgIssueFieldTitle}' field has no value span`);
             return undefined;
         }
         const text = valueSpan.textContent.trim();
         if (!text || text === 'None yet') {
-            console.log("[Jira Links] 'Jira tickets' field is empty");
+            console.log(`[Jira Links] '${cfgIssueFieldTitle}' field is empty`);
             return undefined;
         }
-        console.log("[Jira Links] Found tickets field value: " + text);
+        console.log(`[Jira Links] Found '${cfgIssueFieldTitle}' field value: ${text}`);
         return text;
     }
 
@@ -69,7 +70,7 @@
         removeExistingJiraSection();
 
         const jiraSection = document.createElement('div');
-        jiraSection.id = JIRA_SECTION_ID;
+        jiraSection.id = cfgJiraSectionId;
         jiraSection.style.marginTop = '20px';
 
         jiraSection.innerHTML = `
