@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         GitHub Issue Jira Links
 // @namespace    http://tampermonkey.net/
-// @version      2.1
-// @description  Add clickable Jira ticket links from the "Jira tickets" project field. Works in both issue pages and project board pane views.
+// @version      3.0
+// @description  Add clickable Jira ticket links from the "Jira tickets" issue field. Works in both issue pages and project board pane views.
 // @author       Fgerthoffert
 // @match        https://github.com/*/*/issues/*
 // @match        https://github.com/*/*/projects/*
@@ -13,16 +13,8 @@
     'use strict';
 
     const cfgJiraBaseURL = 'https://support.jahia.com/browse/';
-    const cfgTicketsFieldName = 'Jira tickets';
     const cfgIssueEventsBaseURL = 'https://zencrepes.jahia.com/zindex/';
     const JIRA_SECTION_ID = 'tampermonkey-jira-links';
-
-    // --- View detection ---
-
-    function isProjectPaneView() {
-        const url = window.location.href;
-        return url.includes('/projects/') && url.includes('pane=issue');
-    }
 
     // --- DOM helpers ---
 
@@ -31,62 +23,28 @@
         if (existing) existing.remove();
     }
 
-    // --- Issue view: find projects in sidebar ---
+    // --- Issue field extraction ---
 
-    function findAllProjectsInSidebar() {
-        const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
-        if (!projectsSidebar) {
-            console.log("[Jira Links] No projects sidebar found");
-            return [];
+    function getTicketsFromIssueField() {
+        // Look for the "Jira tickets" field button via its aria-label
+        const fieldButton = document.querySelector('button[aria-label="Edit Jira tickets"]');
+        if (!fieldButton) {
+            console.log("[Jira Links] No 'Jira tickets' issue field found");
+            return undefined;
         }
-        // Try the standard issue view container first
-        let container = projectsSidebar.querySelector('div:nth-child(2) > div');
-        if (!container) {
-            // Fallback: look for any child div that contains project entries
-            container = projectsSidebar.querySelector('div > div');
+        // The value is in the second span (the one with the value text class)
+        const valueSpan = fieldButton.querySelector('span[class*="issueFieldValueText"]');
+        if (!valueSpan) {
+            console.log("[Jira Links] 'Jira tickets' field has no value span");
+            return undefined;
         }
-        if (!container) {
-            console.log("[Jira Links] No project entries container found");
-            return [];
+        const text = valueSpan.textContent.trim();
+        if (!text || text === 'None yet') {
+            console.log("[Jira Links] 'Jira tickets' field is empty");
+            return undefined;
         }
-        const projectEntries = Array.from(container.children);
-        console.log("[Jira Links] Found " + projectEntries.length + " project(s) in sidebar");
-        return projectEntries;
-    }
-
-    function expandProject(project) {
-        if (!project) return;
-        if (!project.textContent.includes(cfgTicketsFieldName)) {
-            const expandButton = project.querySelector('[data-component="IconButton"]');
-            if (expandButton) {
-                console.log("[Jira Links] Expanding project");
-                expandButton.click();
-            }
-        }
-    }
-
-    function getTicketsFieldFromProject(project) {
-        const ul = project.querySelector('div > ul');
-        if (!ul) return undefined;
-        const fields = Array.from(ul.children);
-        for (const field of fields) {
-            if (field.textContent.includes(cfgTicketsFieldName)) {
-                // Primary selector: li > span > button > span (issue view structure)
-                const spans = field.querySelectorAll('li > span > button > span');
-                if (spans && spans.length > 1) {
-                    return spans[1].textContent;
-                }
-                // Fallback: look for any span containing a ticket-like pattern
-                const allSpans = field.querySelectorAll('span');
-                for (const span of allSpans) {
-                    const text = span.textContent.trim();
-                    if (text && text !== cfgTicketsFieldName && /[A-Z]+-\d+/.test(text)) {
-                        return text;
-                    }
-                }
-            }
-        }
-        return undefined;
+        console.log("[Jira Links] Found tickets field value: " + text);
+        return text;
     }
 
 
@@ -134,10 +92,6 @@
         // Issue view: metadata section
         const issueMetadata = document.querySelector('[data-testid="issue-metadata-fixed"] > div');
         if (issueMetadata) return issueMetadata;
-
-        // Project pane view: look for the sidebar projects section itself and insert after it
-        const projectsSidebar = document.querySelector('[data-testid="sidebar-projects-section"]');
-        if (projectsSidebar) return projectsSidebar.parentElement;
 
         // Fallback: issue body
         const issueBody = document.querySelector('[data-testid="issue-body"]');
@@ -195,25 +149,13 @@
 
     // --- Main logic ---
 
-    function collectTicketsFromSidebar() {
-        const projects = findAllProjectsInSidebar();
-        for (const project of projects) {
-            expandProject(project);
+    function collectTicketsFromField() {
+        const content = getTicketsFromIssueField();
+        const ticketIds = getTicketIds(content);
+        if (ticketIds.length > 0) {
+            const container = findTargetContainer();
+            createJiraSection(ticketIds, cfgJiraBaseURL, container);
         }
-
-        setTimeout(() => {
-            const allTicketIds = [];
-            for (const project of projects) {
-                const content = getTicketsFieldFromProject(project);
-                const ids = getTicketIds(content);
-                if (ids.length > 0) allTicketIds.push(...ids);
-            }
-            const uniqueTicketIds = [...new Set(allTicketIds)];
-            if (uniqueTicketIds.length > 0) {
-                const container = findTargetContainer();
-                createJiraSection(uniqueTicketIds, cfgJiraBaseURL, container);
-            }
-        }, 1000);
     }
 
     function init() {
@@ -228,8 +170,8 @@
             addLinkToIssueEvent(issue, cfgIssueEventsBaseURL);
         }
 
-        // Use the same sidebar-based approach for both issue view and project pane view
-        collectTicketsFromSidebar();
+        // Read Jira tickets directly from the issue field
+        collectTicketsFromField();
     }
 
     // --- SPA navigation handling ---
