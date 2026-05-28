@@ -42,8 +42,7 @@ patterns:
       # - Jahia/jahia => This is a clone of jahia-private
       # - Jahia/pm => The repo used by PM for their internal issues
       # Though not supported, the following repos should also be present in the list:
-      # - Jahia/formidable => The repo used by PM for their internal issues
-      - Jahia/advanced-visibility@main
+      - Jahia/formidable@main
       - Jahia/app-shell@main
       - Jahia/asset-webpack-example@main
       - Jahia/assets@main
