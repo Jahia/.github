@@ -4,11 +4,13 @@ name: Trigger Release creation
 
 on:
   release:
-    types: [prereleased]
+    # `prereleased` cannot be used because draft -> prerelease does not trigger the workflow
+    types: [published]
 
 jobs:
   release-module:
+    if: ${{ github.event.release.prerelease == true }}
     uses: Jahia/jahia-modules-action/.github/workflows/reusable-release-module.yml@v2
-    secrets: inherit 
+    secrets: inherit
     with:
       primary_release_branch: $default-branch
