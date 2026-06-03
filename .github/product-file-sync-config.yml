@@ -47,7 +47,7 @@ patterns:
       - Jahia/app-shell@main
       - Jahia/asset-webpack-example@main
       - Jahia/assets@main
-      - Jahia/atmosphere@main
+      - Jahia/atmosphere@master
       - Jahia/augmented-search@main
       - Jahia/augmented-search-custom-configuration@main
       - Jahia/augmented-search-package@main
@@ -57,7 +57,7 @@ patterns:
       - Jahia/cimg-mvn-cache@main
       - Jahia/ckeditor@main
       - Jahia/ckeditor-dev@main
-      - Jahia/cla-assistant@main
+      - Jahia/cla-assistant@master
       - Jahia/client-cache-control@main
       - Jahia/cloudimage@main
       - Jahia/clustering@main
@@ -80,16 +80,16 @@ patterns:
       - Jahia/distributed-sessions@main
       - Jahia/docker-elasticsearch@main
       - Jahia/docker-openldap@main
-      - Jahia/drools@main
+      - Jahia/drools@master
       - Jahia/dx-tests-specs@main
-      - Jahia/ehcache@main
-      - Jahia/el-spec@main
+      - Jahia/ehcache@master
+      - Jahia/el-spec@master
       - Jahia/elasticsearch-connector@main
       - Jahia/estool@main
       - Jahia/external-provider@main
       - Jahia/external-provider-users-groups@main
       - Jahia/facets@main
-      - Jahia/felix-dev@main
+      - Jahia/felix-dev@master
       - Jahia/formidable@main
       - Jahia/forms-core@main
       - Jahia/forms-core-tests@main
@@ -100,11 +100,11 @@ patterns:
       - Jahia/forms-prefill@main
       - Jahia/forms-snippets-extension@main
       - Jahia/function-score-examples@main
-      - Jahia/gemini.blueprint@main
+      - Jahia/gemini.blueprint@master
       - Jahia/github-actions-runners@v5.17.0
       - Jahia/graphql-core@main
       - Jahia/graphql-java@v13.x-jahia
-      - Jahia/graphql-java-servlet@main
+      - Jahia/graphql-java-servlet@master
       - Jahia/guest-multipart-filter@main
       - Jahia/html-filtering@main
       - Jahia/izpack@4.3
@@ -137,7 +137,7 @@ patterns:
       - Jahia/jahia-user-entries@main
       - Jahia/jahia-user-feedbacks@main
       - Jahia/JahiaReleaseTool@main
-      - Jahia/java-ts-bind@main
+      - Jahia/java-ts-bind@master
       - Jahia/javascript-components@main
       - Jahia/javascript-modules@main
       - Jahia/jcontent@main
@@ -162,14 +162,14 @@ patterns:
       - Jahia/legacy-default-components@main
       - Jahia/license-tools@main
       - Jahia/linkchecker@main
-      - Jahia/lucene-solr@main
+      - Jahia/lucene-solr@master
       - Jahia/luxe-jahia-demo@main
       - Jahia/macros@main
       - Jahia/maven-archetypes@main
-      - Jahia/maven-release@main
+      - Jahia/maven-release@master
       - Jahia/module-manager@main
       - Jahia/moonstone@main
-      - Jahia/mvel@main
+      - Jahia/mvel@master
       - Jahia/news-qamf@main
       - Jahia/npm-jsx-templates-web-blue@main
       - Jahia/npm-solid-react-templateset-example@main
