@@ -62,7 +62,6 @@ patterns:
       - Jahia/cloudimage@main
       - Jahia/clustering@main
       - Jahia/cmis-provider@main
-      - Jahia/content-editor@main
       - Jahia/content-security-policy@main
       - Jahia/content-versioning@main
       - Jahia/contentRetrieval@main
