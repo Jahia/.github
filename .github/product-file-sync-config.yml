@@ -67,9 +67,8 @@ patterns:
       - Jahia/contentRetrieval@main
       - Jahia/copy-to-other-languages@main
       - Jahia/core-perf-test@main
-      - Jahia/core-perf-test-JMeter-WebSocketSampler@main
+      - Jahia/core-perf-test-JMeter-WebSocketSampler@master
       - Jahia/core-perf-test-terraform@main
-      - Jahia/database-connector@main
       - Jahia/default@main
       - Jahia/deleted-issues@main
       - Jahia/delivery@main
