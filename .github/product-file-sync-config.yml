@@ -170,7 +170,6 @@ patterns:
       - Jahia/mvel@master
       - Jahia/news-qamf@main
       - Jahia/npm-jsx-templates-web-blue@main
-      - Jahia/npm-solid-react-templateset-example@main
       - Jahia/open-source@main
       - Jahia/opencode@main
       - Jahia/org.ops4j.pax.web@main
