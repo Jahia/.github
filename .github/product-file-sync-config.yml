@@ -171,7 +171,7 @@ patterns:
       - Jahia/news-qamf@main
       - Jahia/npm-jsx-templates-web-blue@main
       - Jahia/open-source@main
-      - Jahia/opencode@main
+      - Jahia/product-lifecycle@main
       - Jahia/org.ops4j.pax.web@main
       - Jahia/OSGi-modules-samples@main
       - Jahia/personal-api-tokens@main
