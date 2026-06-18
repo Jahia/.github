@@ -1,23 +1,40 @@
 This folder contains tools and scripts useful when using GitHub
 
-# TamperMonkey
+# Userscript: GitHub Issue Jira Links
 
-Using the script tampermonkey-support-tickets.js
-
-After installer the Chrome Extension "Tampermonkey", this script will build links to Jira tickets from the "Jira tickets" field in the Customers project.
+This script adds clickable Jira ticket links from the "Jira tickets" issue field in the Customers project. It works on both issue pages and project board pane views.
 
 <img src="./docs/link-jira-tickets.png" witdh= "800" />
 
-To install:
- - Install Tampermonkey chrome extension
- - Click on the "+" to add an extension
- - Copy/paste the content of the file.
+## Recommended: ViolentMonkey
 
-Troubleshooting:
-- I installed Tampermonkey and added the script, but it's not running.
-Ensure you enabled "Developer mode" under Google Chrome --> Extensions - Manage Extensions
-(You might need to restart your browser to make it effective.)
+[ViolentMonkey](https://violentmonkey.github.io) is a free and open-source userscript manager. It is the recommended extension for running this script.
+
+Use the script: `violentmonkey-support-tickets.js`
+
+To install:
+ - Install the [ViolentMonkey](https://violentmonkey.github.io/get-it/) browser extension
+ - Open the ViolentMonkey dashboard and click **+** → **New script**
+ - Paste the content of `violentmonkey-support-tickets.js` and save
+
+## Legacy: TamperMonkey (not recommended)
+
+> ⚠️ **Note:** Tampermonkey is closed-source software. We keep this script for reference only and do not recommend using it.
+
+The script `tampermonkey-support-tickets.js` remains available but is no longer maintained.
+
+<details>
+<summary>TamperMonkey install instructions (legacy)</summary>
+
+ - Install the Tampermonkey Chrome extension
+ - Click on the "+" to add a script
+ - Copy/paste the content of `tampermonkey-support-tickets.js`
+
+Troubleshooting: if the script is not running, ensure "Developer mode" is enabled under Chrome → Extensions → Manage Extensions and restart your browser.
+
 ![image](https://github.com/user-attachments/assets/b34b75f1-1ed0-4d98-80fd-3b8ccaafb10e)
+
+</details>
 
 # GitHub Issues notifications
 
