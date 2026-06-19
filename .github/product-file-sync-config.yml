@@ -217,6 +217,7 @@ patterns:
       - Jahia/trivy-db@main
       - Jahia/update-manager@main
       - Jahia/urlrewritefilter@main
+      - Jahia/user-safety-patch@main
       - Jahia/userDashboard@main
       - Jahia/user-password-authentication@main
       - Jahia/visibility@main
