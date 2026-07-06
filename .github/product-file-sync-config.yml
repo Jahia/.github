@@ -191,7 +191,6 @@ patterns:
       - Jahia/rolesmanager@main
       - Jahia/saml-authentication-valve@main
       - Jahia/sandbox@main
-      - Jahia/sdk-jahia@main
       - Jahia/search@main
       - Jahia/search-ui-jahia-connector@main
       - Jahia/security-filter-tools@main
