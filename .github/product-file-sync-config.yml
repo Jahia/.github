@@ -164,6 +164,7 @@ patterns:
       - Jahia/mail-service@main
       - Jahia/maven-archetypes@main
       - Jahia/maven-release@master
+      - Jahia/mcp-server@main
       - Jahia/module-manager@main
       - Jahia/moonstone@main
       - Jahia/mvel@master
