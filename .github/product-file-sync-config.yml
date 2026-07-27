@@ -129,7 +129,6 @@ patterns:
       - Jahia/jahia-qa-data@main
       - Jahia/jahia-reporter@main
       - Jahia/jahia-repository-explorer@main
-      - Jahia/jahia-security-scan@main
       - Jahia/jahia-ui-root@main
       - Jahia/jahia-user-entries@main
       - Jahia/jahia-user-feedbacks@main
