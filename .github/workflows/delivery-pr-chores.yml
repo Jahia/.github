@@ -20,5 +20,5 @@ jobs:
     permissions:
       pull-requests: write
       contents: read
-      id-token: write    
+      id-token: write
     secrets: inherit
