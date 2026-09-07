@@ -221,6 +221,5 @@ patterns:
       - Jahia/userDashboard@main
       - Jahia/user-password-authentication@main
       - Jahia/visibility@main
-      - Jahia/visibility-migrator@main
       - Jahia/workato-unomi-connector@main
       - Jahia/workflow-extender@main
