@@ -119,12 +119,21 @@ patterns:
       - Jahia/jahia-developer-tools@main
       - Jahia/jahia-docker-mvn-cache@main
       - Jahia/jahia-ee@main
+      - Jahia/jahia-ee@JAHIA-8-2-3-X-BRANCH
+      - Jahia/jahia-ee@JAHIA-8-2-2-X-BRANCH
+      - Jahia/jahia-ee@JAHIA-8-1-9-X-BRANCH      
       - Jahia/Jahia-MF-Integ-Test-Site@main
       - Jahia/jahia-modules-action@main
       - Jahia/jahia-oauth@main
       - Jahia/jahia-pack-private@main
+      - Jahia/jahia-pack-private@JAHIA-8-2-3-X-BRANCH
+      - Jahia/jahia-pack-private@JAHIA-8-2-2-X-BRANCH
+      - Jahia/jahia-pack-private@JAHIA-8-1-9-X-BRANCH      
       - Jahia/jahia-page-composer@main
       - Jahia/jahia-private@main
+      - Jahia/jahia-private@JAHIA-8-2-3-X-BRANCH
+      - Jahia/jahia-private@JAHIA-8-2-2-X-BRANCH
+      - Jahia/jahia-private@JAHIA-8-1-9-X-BRANCH
       - Jahia/jahia-qa@main
       - Jahia/jahia-qa-data@main
       - Jahia/jahia-reporter@main
