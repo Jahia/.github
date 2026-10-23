@@ -37,12 +37,12 @@ patterns:
     repositories:
       # An updated version of this list can be obtained by running this
       # workflow: https://github.com/Jahia/.github/actions/workflows/delivery-list-product-repos.yml
-      # IMPORTANT: The following repositories should not be synced
-      # from the list based on topics, make sure to remove them:
-      # - Jahia/.github => This is the current repository
-      # - Jahia/jahia => This is a clone of jahia-private
-      # - Jahia/pm => The repo used by PM for their internal issues
-      # Though not supported, the following repos should also be present in the list:
+      # Never synced — these carry the topic but must stay out of the active list:
+      # - Jahia/.github@main # the current repository
+      # - Jahia/jahia@main # public mirror of jahia-private
+      # - Jahia/jahia-pack@main # public mirror of jahia-pack-private
+      # - Jahia/pm@main # the repo used by PM for their internal issues
+      # Active — a new addition is dated `# added YYYY-MM-DD`:
       - Jahia/app-shell@main
       - Jahia/asset-webpack-example@main
       - Jahia/assets@main
@@ -89,8 +89,6 @@ patterns:
       - Jahia/felix-dev@master
       - Jahia/formidable@main
       - Jahia/forms-core@main
-      - Jahia/forms-core-tests@main
-      - Jahia/forms-elasticsearch-storage-tests@main
       - Jahia/forms-extended-inputs@main
       - Jahia/forms-nocss-theme@main
       - Jahia/forms-package@main
@@ -224,3 +222,6 @@ patterns:
       - Jahia/visibility@main
       - Jahia/workato-unomi-connector@main
       - Jahia/workflow-extender@main
+      # Removed on failure:
+      # - Jahia/forms-core-tests@main # archived 2026-10-15, removed from the list 2026-10-23
+      # - Jahia/forms-elasticsearch-storage-tests@main # archived 2026-10-15, removed from the list 2026-10-23
