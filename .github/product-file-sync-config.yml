@@ -222,5 +222,5 @@ patterns:
       - Jahia/workato-unomi-connector@main
       - Jahia/workflow-extender@main
       # Removed on failure:
-      # - Jahia/forms-core-tests@main # archived 2026-10-23
-      # - Jahia/forms-elasticsearch-storage-tests@main # archived 2026-10-23
+      # - Jahia/forms-core-tests@main # archived 2026-10-15, removed from the list 2026-10-23
+      # - Jahia/forms-elasticsearch-storage-tests@main # archived 2026-10-15, removed from the list 2026-10-23
