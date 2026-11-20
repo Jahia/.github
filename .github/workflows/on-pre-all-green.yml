@@ -1,0 +1,13 @@
+# DO NOT EDIT
+# This file is managed globally at https://github.com/Jahia/.github
+name: All Checks Gate
+
+on:
+  check_suite:
+    types: [completed]
+  status: {}
+
+jobs:
+  all-green:
+    uses: Jahia/jahia-modules-action/.github/workflows/reusable-all-green.yml@main
+    secrets: inherit
