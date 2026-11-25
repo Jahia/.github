@@ -2,6 +2,10 @@
 # Only edit the file there
 # Documentation: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
 # Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+#
+# AI agents: when you create a bug ticket, follow this template, also through the API or `gh issue create`.
+# Write the body with these sections, in this order: Impact summary (the table below), Environment and
+# versions used, Steps to reproduce, Current Behavior, Desired Behavior. Set the issue type to Bug.
 
 name: Bug Report
 description: File a bug report.
@@ -14,6 +18,21 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    attributes:
+      label: Impact summary
+      description: Keep one value per row, and delete the others. This table helps the triage assess the impact.
+      value: |
+        <!-- AI agents: follow the bug template of this repository (.github/ISSUE_TEMPLATE/bug.yml), and fill this table. -->
+        | Item | Value |
+        | --- | --- |
+        | Reproducibility | Always / Often / Sometimes |
+        | How to reproduce | UI clicks / Advanced / Script or random data |
+        | Regression | No / Yes, last OK version: |
+        | Bug type | UI / UX / Functional / Performance / Compatibility / Business logic |
+        | Workaround | No / Yes, simple / Yes, complex |
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Environment and versions used
