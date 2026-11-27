@@ -16,6 +16,8 @@ on:
 
 jobs:
   WF:
+    # Jahia/.github holds the source of this file and is never a sync target: no session runs here.
+    if: github.repository != 'Jahia/.github'
     uses: Jahia/jahia-modules-action/.github/workflows/reusable-ai-agent-execution.yml@v2
     with:
       payload: ${{ inputs.payload }}
