@@ -225,3 +225,9 @@ patterns:
       # Removed on failure:
       # - Jahia/forms-core-tests@main # archived 2026-10-15, removed from the list 2026-10-23
       # - Jahia/forms-elasticsearch-storage-tests@main # archived 2026-10-15, removed from the list 2026-10-23
+  # The AI agent execution workflow, limited to the sandbox while the dispatch path is proven.
+  # To roll it out, move the file into the `files` of the first pattern, and delete this pattern.
+  - files:
+      - .github/workflows/delivery-ai-agent.yml
+    repositories:
+      - Jahia/sandbox@main # added 2026-11-27

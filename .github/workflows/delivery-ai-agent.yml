@@ -1,0 +1,28 @@
+# DO NOT EDIT
+# This file is managed globally at https://github.com/Jahia/.github
+name: Delivery - AI Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: "JSON object with the machine parameters of the session: runner, timeout_minutes, model, origin, session_index, remaining_seconds, guard_run_id. Contract: ai-issue-agent/README.md of Jahia/jahia-modules-action."
+        required: true
+        type: string
+      prompt:
+        description: "The request of the session: a persona hint and a short brief, or the original request verbatim."
+        required: true
+        type: string
+
+jobs:
+  WF:
+    # Jahia/.github holds the source of this file and is never a sync target: no session runs here.
+    if: github.repository != 'Jahia/.github'
+    uses: Jahia/jahia-modules-action/.github/workflows/reusable-ai-agent-execution.yml@v2
+    with:
+      payload: ${{ inputs.payload }}
+      prompt: ${{ inputs.prompt }}
+    secrets: inherit
+    permissions:
+      id-token: write
+      contents: read
